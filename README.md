@@ -1,5 +1,7 @@
 # Personal Portfolio
 
+[![Portfolio CI](https://github.com/AbdurRehman924/personal-portfolio/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/AbdurRehman924/personal-portfolio/actions/workflows/portfolio-ci.yml)
+
 A modern, responsive portfolio website built with React and Tailwind CSS showcasing my skills as a DevSecOps and Cloud Engineer.
 
 ## Features
