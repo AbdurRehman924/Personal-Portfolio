@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const [currentSkill, setCurrentSkill] = useState(0);
+
+  const skills = ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Python', 'Linux', 'Git'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +14,14 @@ const Hero = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSkill((prev) => (prev + 1) % skills.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [skills.length]);
 
   const handleScrollClick = () => {
     window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
@@ -27,16 +38,27 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
           Khan AbdurRehman
         </h1>
-        <p className="text-xl md:text-2xl text-primary font-medium mb-8">
+        <p className="text-xl md:text-2xl text-primary font-medium mb-4">
           DevSecOps | Cloud Engineer
         </p>
+        
+        {/* Auto-sliding tech skills */}
+        <div className="h-12 flex items-center justify-center mb-8">
+          <div className="text-lg md:text-xl text-gray-600 flex items-center gap-2">
+            <span>Specialized in</span>
+            <span className="font-semibold text-blue-600 min-w-[120px] inline-block transition-all duration-500">
+              {skills[currentSkill]}
+            </span>
+          </div>
+        </div>
+
         <div className="w-24 h-1 bg-primary mx-auto"></div>
       </div>
 
       {/* Scroll Indicator */}
       {showScrollIndicator && (
         <div
-          className="absolute bottom-8  transform -translate-x-1/2 animate-bounce"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
           onClick={handleScrollClick}
         >
           <div className="flex flex-col items-center text-gray-500 cursor-pointer text-xs transition-colors">Scroll down
