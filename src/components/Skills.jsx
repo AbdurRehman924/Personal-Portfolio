@@ -66,7 +66,7 @@ const Skills = () => {
         "React.js",
         "Vue.js",
         "Component-driven UI",
-        "State management basics"
+        "State management"
       ]
     }
   ];

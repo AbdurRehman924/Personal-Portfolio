@@ -36,7 +36,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       {showScrollIndicator && (
         <div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+          className="absolute bottom-8  transform -translate-x-1/2 animate-bounce"
           onClick={handleScrollClick}
         >
           <div className="flex flex-col items-center text-gray-500 cursor-pointer text-xs transition-colors">Scroll down
