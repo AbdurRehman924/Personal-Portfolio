@@ -20,7 +20,7 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 relative">
       <div className="text-center max-w-4xl px-6">
         <img
-          src="/portfolio.jpeg"
+          src={`${process.env.PUBLIC_URL}/portfolio.jpeg`}
           alt="Portfolio"
           className="w-[200px] h-[200px] rounded-full mx-auto mb-4"
         />
