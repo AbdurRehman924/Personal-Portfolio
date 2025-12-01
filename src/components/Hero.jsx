@@ -4,7 +4,7 @@ const Hero = () => {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
   const [currentSkill, setCurrentSkill] = useState(0);
 
-  const skills = ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Python', 'Linux', 'Git'];
+  const skills = ['AWS', 'GCP', 'Azure', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Python', 'Linux', 'Git', 'CI / CD', 'Actions', 'Ansible', 'Monitoring', 'Security', 'Logging'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSkill((prev) => (prev + 1) % skills.length);
-    }, 2000);
+    }, 700);
 
     return () => clearInterval(interval);
   }, [skills.length]);
@@ -44,7 +44,7 @@ const Hero = () => {
 
         {/* Auto-sliding tech skills */}
         <div className="h-12 flex items-center justify-center mb-8">
-          <div className="text-lg md:text-xl text-gray-600 flex items-center gap-2">
+          <div className="text-lg md:text-xl text-gray-600 flex items-end gap-2">
             <span>Specialized in</span>
             <span className="font-semibold text-blue-600 min-w-[120px] inline-block transition-all duration-500">
               {skills[currentSkill]}
