@@ -41,7 +41,7 @@ const Hero = () => {
         <p className="text-xl md:text-2xl text-primary font-medium mb-4">
           DevSecOps | Cloud Engineer
         </p>
-        
+
         {/* Auto-sliding tech skills */}
         <div className="h-12 flex items-center justify-center mb-8">
           <div className="text-lg md:text-xl text-gray-600 flex items-center gap-2">
@@ -58,7 +58,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       {showScrollIndicator && (
         <div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+          className="absolute bottom-8  transform -translate-x-1/2 animate-bounce"
           onClick={handleScrollClick}
         >
           <div className="flex flex-col items-center text-gray-500 cursor-pointer text-xs transition-colors">Scroll down
