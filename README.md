@@ -2,15 +2,18 @@
 
 [![Portfolio CI](https://github.com/AbdurRehman924/personal-portfolio/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/AbdurRehman924/personal-portfolio/actions/workflows/portfolio-ci.yml)
 
-A modern, responsive portfolio website built with React and Tailwind CSS showcasing my skills as a DevSecOps and Cloud Engineer.
+A modern, responsive portfolio website built with React and Tailwind CSS showcasing my skills as a DevSecOps and Cloud Engineer. This project demonstrates proficiency in modern web development, CI/CD practices, and cloud-native deployment strategies.
 
 ## Features
 
-- Responsive design
-- Modern UI with Tailwind CSS
-- Contact information with clickable links
-- Professional profile image
-- Skills and about sections
+- **Responsive Design**: Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices
+- **Modern UI**: Clean and professional interface built with Tailwind CSS utility classes
+- **Interactive Contact Section**: Clickable email and LinkedIn links for easy communication
+- **Professional Branding**: Custom profile image and personal branding elements
+- **Skills Showcase**: Comprehensive display of technical skills and expertise
+- **About Section**: Detailed professional background and experience
+- **Performance Optimized**: Fast loading times and optimized assets
+- **CI/CD Integration**: Automated testing and deployment pipeline using GitHub Actions
 
 ## Getting Started
 
