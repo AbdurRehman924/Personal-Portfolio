@@ -88,8 +88,10 @@ const Projects = () => {
               View on GitHub
             </a>
           </div>
-          <p className="text-gray-600 leading-relaxed text-sm">
+          <p className="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 font-medium">
             Everything in my skills section is backed by real, hands-on work — built, broken, debugged, and shipped in this single production-grade project.
+          </p>
+          <p className="text-gray-600 leading-relaxed text-sm mt-3">
             Full lifecycle: infrastructure provisioning with Terraform, cluster bootstrapping with kubeadm,
             deploying 12 microservices, and layering on a full observability, security, GitOps, and service mesh stack.
           </p>
