@@ -12,8 +12,7 @@ const GitHubStats = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-3">GitHub</h2>
           <div className="w-12 h-0.5 bg-blue-500 mx-auto mb-4"></div>
           <p className="text-gray-500 text-sm max-w-xl mx-auto">
-            Everything in my skills section is backed by real, hands-on work —
-            built, broken, debugged, and shipped in a single production-grade project.
+            A snapshot of my coding activity on GitHub.
           </p>
         </div>
 

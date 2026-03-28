@@ -89,10 +89,9 @@ const Projects = () => {
             </a>
           </div>
           <p className="text-gray-600 leading-relaxed text-sm">
-            Built a complete production-grade Kubernetes platform from scratch on AWS EC2 — no managed services, no shortcuts.
-            Covers the full lifecycle: infrastructure provisioning with Terraform, cluster bootstrapping with kubeadm,
+            Everything in my skills section is backed by real, hands-on work — built, broken, debugged, and shipped in this single production-grade project.
+            Full lifecycle: infrastructure provisioning with Terraform, cluster bootstrapping with kubeadm,
             deploying 12 microservices, and layering on a full observability, security, GitOps, and service mesh stack.
-            Solved real production-level networking and security challenges along the way.
           </p>
         </div>
 
