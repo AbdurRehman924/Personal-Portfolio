@@ -1,26 +1,54 @@
+import useFadeIn from '../hooks/useFadeIn';
+
+const contacts = [
+  {
+    label: "Email",
+    value: "pure.art.endeavor@gmail.com",
+    href: "mailto:pure.art.endeavor@gmail.com",
+  },
+  {
+    label: "LinkedIn",
+    value: "khan-abdurrehman",
+    href: "https://www.linkedin.com/in/khan-abdurrehman-883653214/",
+  },
+  {
+    label: "GitHub",
+    value: "AbdurRehman924",
+    href: "https://github.com/AbdurRehman924",
+  },
+];
+
 const Contact = () => {
+  const ref = useFadeIn();
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 animate-bounce">Get In Touch</h2>
-        <p className="text-lg text-gray-600 mb-8">
-          Open to new challenges and growth opportunities in cloud computing, 
-          aiming to make a meaningful impact in the industry.
+    <section id="contact" className="py-24 bg-gray-50">
+      <div ref={ref} className="max-w-2xl mx-auto px-6 text-center opacity-0 translate-y-6 transition-all duration-700">
+        <h2 className="text-4xl font-bold text-gray-900 mb-3">Get In Touch</h2>
+        <div className="w-12 h-0.5 bg-blue-500 mx-auto mb-6"></div>
+        <p className="text-gray-500 mb-10 leading-relaxed">
+          Open to DevSecOps, Cloud Engineering, and Platform Engineering roles. If you're building something ambitious, let's talk.
         </p>
-        <div className="space-y-4">
-          <div className="p-4 bg-gray-50 rounded-lg">
-            <p className="text-gray-500">Email</p>
-            <a href="mailto:pure.art.endeavor@gmail.com" className="font-medium text-blue-600 hover:text-blue-800">pure.art.endeavor@gmail.com</a>
-          </div>
-          <div className="p-4 bg-gray-50 rounded-lg">
-            <p className="text-gray-500">LinkedIn</p>
-            <a href="https://www.linkedin.com/in/khan-abdurrehman-883653214/" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 hover:text-blue-800">https://www.linkedin.com/in/khan-abdurrehman-883653214/</a>
-          </div>
-          <div className="p-4 bg-gray-50 rounded-lg">
-            <p className="text-gray-500">Phone</p>
-            <p className="font-medium">+923010755088</p>
-          </div>
+
+        <div className="space-y-3 mb-10">
+          {contacts.map((c, i) => (
+            <a
+              key={i}
+              href={c.href}
+              target={c.href.startsWith('http') ? '_blank' : undefined}
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-4 bg-white border border-gray-100 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all duration-200 text-left group"
+            >
+              <div>
+                <p className="text-xs text-gray-400 font-medium">{c.label}</p>
+                <p className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">{c.value}</p>
+              </div>
+            </a>
+          ))}
         </div>
+
+        <p className="text-xs text-gray-400">
+          Based in Pakistan · Available for remote roles worldwide
+        </p>
       </div>
     </section>
   );
