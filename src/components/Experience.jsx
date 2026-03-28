@@ -1,27 +1,51 @@
 const experience = [
   {
     role: "DevSecOps Engineer",
-    company: "Freelance / Self-Directed",
-    period: "2024 – Present",
-    type: "Cloud & Infrastructure",
+    company: "Personal Project — Production-Grade K8s on AWS",
+    period: "",
+    type: "Self-Directed",
     points: [
-      "Built a production-grade self-managed Kubernetes platform on AWS EC2 from scratch using kubeadm — 6-node HA cluster, 12 microservices, 43 AWS resources",
-      "Implemented full observability stack: Prometheus, Grafana, Loki, Promtail, Jaeger distributed tracing",
-      "Deployed Istio service mesh with mTLS, VirtualServices, and PeerAuthentication policies",
-      "Set up ArgoCD GitOps, Falco runtime security, Trivy scanning, HPA/VPA autoscaling, and cert-manager",
-      "Provisioned all infrastructure with Terraform modules; automated cluster bootstrap with shell scripts",
+      "Built a self-managed 6-node HA Kubernetes cluster on AWS EC2 from scratch using kubeadm and Terraform — no managed services.",
+      "Deployed 12 microservices with full observability: Prometheus, Grafana, Loki, Promtail, and Jaeger distributed tracing.",
+      "Implemented Istio service mesh with mTLS STRICT mode, VirtualServices, and canary deployments.",
+      "Set up ArgoCD GitOps with auto-sync and self-heal across 7 applications.",
+      "Hardened security with Falco runtime detection, Trivy image scanning, network policies, and cert-manager.",
     ],
   },
   {
-    role: "Full-Stack JavaScript Developer",
-    company: "Professional Experience",
-    period: "2022 – 2024",
-    type: "Software Engineering",
+    role: "Cloud Engineer",
+    company: "Confidential (FinTech / SaaS)",
+    period: "Jul 2025 – Present",
+    type: "Remote",
     points: [
-      "Built and maintained web applications using Node.js, Express.js, React.js, Vue.js, and MongoDB",
-      "Designed and implemented RESTful APIs with authentication, authorization, and data validation",
-      "Worked with cloud deployments on AWS (EC2, S3, RDS) and containerized apps with Docker",
-      "Collaborated in Agile/Scrum teams, managed code via Git, and participated in code reviews",
+      "Led a multi-cloud migration across Azure and AWS, increasing operational efficiency by 30%.",
+      "Implemented automated threat detection with Azure Sentinel, reducing MTTR by 50%.",
+      "Enforced Zero Trust by optimizing IAM roles and network segmentation, achieving 100% audit compliance.",
+      "Secured Kubernetes clusters using network policies, Vault-based secrets management, and image scanning.",
+    ],
+  },
+  {
+    role: "Cloud Engineer",
+    company: "Confidential",
+    period: "Nov 2024 – Jul 2025",
+    type: "Remote",
+    points: [
+      "Architected high-availability cloud infrastructure supporting 10,000+ concurrent users with 99.99% uptime.",
+      "Built modular Terraform stacks, reducing infra provisioning time from 2 hours to 30 minutes.",
+      "Cut annual cloud spend by $15,000 via instance right-sizing and spot instance utilization.",
+      "Designed and tested multi-region Disaster Recovery strategies achieving RTO < 1 hour.",
+    ],
+  },
+  {
+    role: "Cloud Engineer",
+    company: "Digital Perception",
+    period: "Feb 2022 – Sep 2024",
+    type: "On Site",
+    points: [
+      "Developed CI/CD pipelines using GitHub Actions, shortening release cycles by 40%.",
+      "Dockerized environments improving deployment consistency from dev to prod.",
+      "Migrated monolithic architecture to microservices, improving performance by 20%.",
+      "Built full-stack apps using Node.js, Express.js, Vue.js, React.js, and MongoDB.",
     ],
   },
 ];
@@ -58,7 +82,7 @@ const Experience = () => {
                     <span className="text-xs text-blue-600 bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-full shrink-0">{exp.type}</span>
                   </div>
                   <p className="text-sm text-gray-500 mb-1">{exp.company}</p>
-                  <p className="text-xs text-gray-400 mb-4 font-medium">{exp.period}</p>
+                  {exp.period && <p className="text-xs text-gray-400 mb-4 font-medium">{exp.period}</p>}
                   <ul className="space-y-2">
                     {exp.points.map((point, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
