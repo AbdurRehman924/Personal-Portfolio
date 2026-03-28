@@ -1,98 +1,58 @@
-import React from 'react';
+const skillCategories = [
+  {
+    title: "Cloud Platforms",
+    skills: ["AWS (EC2, VPC, IAM, NLB, EBS, CloudWatch)", "Google Cloud Platform (GKE, Cloud Run, IAM)", "Microsoft Azure (Compute, Networking, IAM)", "Cloud-Native Architecture & HA Design"],
+  },
+  {
+    title: "Kubernetes & Containers",
+    skills: ["Kubernetes (self-managed, kubeadm)", "Docker & Containerization", "Calico CNI", "Ingress, RBAC, Network Policies", "HPA, VPA, Cluster Autoscaler", "cert-manager"],
+  },
+  {
+    title: "Service Mesh & Observability",
+    skills: ["Istio (mTLS, VirtualServices, PeerAuthentication)", "Prometheus + Grafana", "Loki + Promtail (centralized logging)", "Jaeger (distributed tracing)", "Alertmanager"],
+  },
+  {
+    title: "Security & DevSecOps",
+    skills: ["Falco (runtime threat detection)", "Trivy (vulnerability scanning)", "IAM Hardening & Zero-Trust", "Secrets Management (KMS, TLS)", "Network Segmentation", "Security Compliance & Auditing"],
+  },
+  {
+    title: "Infrastructure & GitOps",
+    skills: ["Terraform (Modules, Multi-Cloud, State)", "ArgoCD (GitOps)", "Velero (Backup & DR)", "GitHub Actions (CI/CD)", "Shell Scripting & Automation"],
+  },
+  {
+    title: "Programming & Backend",
+    skills: ["Node.js & Express.js", "Python", "JavaScript ES6+", "RESTful API Development", "React.js & Vue.js", "MongoDB"],
+  },
+];
+
+import useFadeIn from '../hooks/useFadeIn';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Cloud & Platform Engineering",
-      skills: [
-        "AWS (EC2, VPC, IAM, RDS, Lambda, Load Balancers, CloudWatch)",
-        "Google Cloud Platform (GCE, GKE, Cloud Run, IAM, VPC)",
-        "Microsoft Azure (Compute, Networking, Monitoring, IAM)",
-        "Kubernetes (Workloads, Networking, Ingress, Secrets, Policies)",
-        "Docker & Containerization",
-        "Cloud-Native Architecture"
-      ]
-    },
-    {
-      title: "Infrastructure Engineering & IaC",
-      skills: [
-        "Terraform (Modules, Multi-Cloud, State Management)",
-        "Infrastructure-as-Code (IaC)",
-        "GitOps workflows",
-        "Automated Provisioning & Scaling"
-      ]
-    },
-    {
-      title: "Cloud Security & DevSecOps",
-      skills: [
-        "IAM Hardening & RBAC",
-        "Network Segmentation & Zero-Trust Principles",
-        "Encryption Standards (KMS, TLS, secrets management)",
-        "Cloud Threat Detection & Proactive Monitoring",
-        "Security Compliance (Best practices, audits, scanning)"
-      ]
-    },
-    {
-      title: "DevOps, Automation & CI/CD",
-      skills: [
-        "GitHub Actions (CI/CD pipelines)",
-        "Shell Scripting (Automation)",
-        "Monitoring & Logging (CloudWatch, Stackdriver/Cloud Logging)",
-        "Release Automation & Deployment Orchestration",
-        "Container Security & Image Scanning"
-      ]
-    },
-    {
-      title: "Programming & Backend Engineering",
-      skills: [
-        "Node.js",
-        "Express.js",
-        "JavaScript ES6+",
-        "RESTful API Development",
-        "MongoDB (Schema design, queries)"
-      ]
-    },
-    {
-      title: "Tools & Workflow",
-      skills: [
-        "Git & Version Control",
-        "Linux & Server Administration",
-        "Agile / Scrum Practices"
-      ]
-    },
-    {
-      title: "Frontend Engineering",
-      skills: [
-        "React.js",
-        "Vue.js",
-        "Component-driven UI",
-        "State management"
-      ]
-    }
-  ];
-
+  const ref = useFadeIn();
   return (
-    <section id="skills" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Technical Skills</h2>
-          <div className="w-16 h-0.5 bg-blue-500 mx-auto"></div>
+    <section id="skills" className="py-24 bg-gray-50">
+      <div ref={ref} className="max-w-6xl mx-auto px-6 opacity-0 translate-y-6 transition-all duration-700">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold text-gray-900 mb-3">Technical Skills</h2>
+          <div className="w-12 h-0.5 bg-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-500 text-sm max-w-xl mx-auto">
+            Hands-on experience across the full cloud-native stack — from infrastructure provisioning to runtime security.
+          </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className={`bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-lg hover:scale-105 hover:border-blue-200 transition-all duration-300 ease-in-out  ${index === skillCategories.length - 1 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''
-                }`}
+              className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
             >
-              <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100 text-center">
-                {category.title}
-              </h3>
-              <div className="space-y-2 text-left">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="text-gray-600 text-sm leading-relaxed flex items-start hover:text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all duration-200 ease-in-out p-2 rounded-md ">
-                    <span className="text-blue-500 mr-2 mt-1">•</span>
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-100">
+                <h3 className="text-sm font-semibold text-gray-800">{category.title}</h3>
+              </div>
+              <div className="space-y-2">
+                {category.skills.map((skill, i) => (
+                  <div key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="text-blue-400 mt-0.5 shrink-0">▸</span>
                     <span>{skill}</span>
                   </div>
                 ))}
