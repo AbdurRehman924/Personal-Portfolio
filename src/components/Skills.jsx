@@ -5,7 +5,7 @@ const skillCategories = [
   },
   {
     title: "Kubernetes & Containers",
-    skills: ["Kubernetes (self-managed, kubeadm)", "Docker & Containerization", "Calico CNI", "Ingress, RBAC, Network Policies", "HPA, VPA, Cluster Autoscaler", "cert-manager"],
+    skills: ["Kubernetes (self-managed, kubeadm)", "Docker & Containerization", "Calico CNI", "Ingress, RBAC, Network Policies", "HPA, VPA, Cluster Autoscaler", "cert-manager", "CoreDNS"],
   },
   {
     title: "Service Mesh & Observability",
@@ -16,8 +16,24 @@ const skillCategories = [
     skills: ["Falco (runtime threat detection)", "Trivy (vulnerability scanning)", "IAM Hardening & Zero-Trust", "Secrets Management (KMS, TLS)", "Network Segmentation", "Security Compliance & Auditing"],
   },
   {
-    title: "Infrastructure & GitOps",
-    skills: ["Terraform (Modules, Multi-Cloud, State)", "ArgoCD (GitOps)", "Velero (Backup & DR)", "GitHub Actions (CI/CD)", "Shell Scripting & Automation"],
+    title: "Networking & DNS",
+    skills: ["VPC Design (subnets, route tables, NAT, peering)", "Load Balancing (L4/L7, NLB/ALB)", "Kubernetes Networking (CoreDNS, CNI, Network Policies)", "DNS management & resolution", "IP-in-IP / overlay networking (Calico IPIP)"],
+  },
+  {
+    title: "Storage & Data",
+    skills: ["Persistent Volumes & Storage Classes", "EBS CSI Driver", "Velero (Backup & Disaster Recovery)", "Volume snapshots & restore", "Stateful workload management"],
+  },
+  {
+    title: "CI/CD & Release Engineering",
+    skills: ["GitHub Actions (pipeline design)", "Container image build & registry (ECR, Docker Hub)", "Rolling deployments, blue/green, canary", "Automated vulnerability scanning in pipelines", "GitOps-driven continuous delivery (ArgoCD)"],
+  },
+  {
+    title: "Reliability & FinOps",
+    skills: ["Chaos Mesh (chaos engineering)", "SLO/SLI concepts & reliability planning", "Kubecost (cost monitoring & optimization)", "Resource requests/limits tuning", "Spot/preemptible instance strategies"],
+  },
+  {
+    title: "Infrastructure & IaC",
+    skills: ["Terraform (Modules, Multi-Cloud, State)", "Shell Scripting & Automation", "Cluster bootstrapping (kubeadm)", "Infrastructure lifecycle management"],
   },
   {
     title: "Programming & Backend",
