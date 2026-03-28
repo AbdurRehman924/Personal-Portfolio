@@ -135,7 +135,7 @@ const Projects = () => {
             { value: "6", label: "EC2 Nodes (HA)" },
             { value: "12", label: "Microservices" },
             { value: "43", label: "AWS Resources" },
-            { value: "11/12", label: "Phases Complete" },
+            { value: "11 / 12", label: "Phases Done · Ongoing" },
           ].map((stat, i) => (
             <div key={i} className="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center">
               <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
