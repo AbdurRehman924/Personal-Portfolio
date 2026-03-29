@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const skills = ['Kubernetes', 'Terraform', 'Istio', 'ArgoCD', 'AWS', 'Docker', 'Prometheus', 'Falco', 'Loki', 'Jaeger', 'CI/CD', 'DevSecOps'];
+const skills = ['AWS', 'AZURE', 'GCP', 'Terraform', 'Kubernetes', 'Docker', 'Istio', 'ArgoCD', 'Prometheus', 'Falco', 'Loki', 'Jaeger', 'DevSecOps', 'CI/CD', 'Github Actions', 'MongoDB', 'Express.js', 'React.js', 'Vue.js', 'Node.js', 'JavaScript'];
 
 const Hero = () => {
   const [showScroll, setShowScroll] = useState(true);
@@ -39,7 +39,7 @@ const Hero = () => {
 
         {/* Skill ticker */}
         <div className="h-10 flex items-center justify-center mb-8">
-          <span className="text-gray-500 text-sm mr-2">Currently working with</span>
+          <span className="text-gray-500 text-sm mr-2">Currently working with -</span>
           <span className="font-semibold text-blue-600 text-sm min-w-[100px] inline-block transition-all duration-500">
             {skills[currentSkill]}
           </span>
