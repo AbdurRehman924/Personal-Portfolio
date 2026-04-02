@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="flex gap-5 text-sm">
         <a href="#about" className="hover:text-white transition-colors">About</a>
         <a href="#solutions" className="hover:text-white transition-colors">Solutions</a>
-        <a href="#case-study" className="hover:text-white transition-colors">Case Study</a>
+        <a href="#architectural-reference" className="hover:text-white transition-colors">Architectural Reference</a>
         <a href="https://github.com/AbdurRehman924" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
       </div>
     </div>

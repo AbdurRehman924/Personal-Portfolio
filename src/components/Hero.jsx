@@ -48,10 +48,10 @@ const Hero = () => {
         {/* CTAs */}
         <div className="flex gap-3 justify-center flex-wrap">
           <a
-            href="#case-study"
+            href="#architectural-reference"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors shadow-sm"
           >
-            View Case Study
+            View Architectural Reference
           </a>
           <a
             href={`${process.env.PUBLIC_URL}/resume.pdf`}
