@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const links = ['About', 'Experience', 'Skills', 'Projects', 'Contact'];
+const links = ['About', 'Solutions', 'Skills', 'Case Study', 'Contact'];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
       { rootMargin: '-40% 0px -55% 0px' }
     );
     links.forEach(link => {
-      const el = document.getElementById(link.toLowerCase());
+      const el = document.getElementById(link.toLowerCase().replace(' ', '-'));
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
@@ -39,9 +39,9 @@ const Navbar = () => {
           {links.map(link => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={`#${link.toLowerCase().replace(' ', '-')}`}
               className={`text-sm font-medium transition-colors ${
-                activeSection === link.toLowerCase()
+                activeSection === link.toLowerCase().replace(' ', '-')
                   ? 'text-blue-600'
                   : 'text-gray-500 hover:text-gray-900'
               }`}
@@ -75,8 +75,8 @@ const Navbar = () => {
           {links.map(link => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
-              className={`text-sm font-medium ${activeSection === link.toLowerCase() ? 'text-blue-600' : 'text-gray-700'}`}
+              href={`#${link.toLowerCase().replace(' ', '-')}`}
+              className={`text-sm font-medium ${activeSection === link.toLowerCase().replace(' ', '-') ? 'text-blue-600' : 'text-gray-700'}`}
               onClick={() => setMenuOpen(false)}
             >
               {link}
