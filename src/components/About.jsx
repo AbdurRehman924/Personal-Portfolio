@@ -3,17 +3,17 @@ import useFadeIn from '../hooks/useFadeIn';
 const About = () => {
   const ref = useFadeIn();
   const highlights = [
-    { value: '3+', label: 'Years Experience' },
-    { value: '15+', label: 'Cloud Technologies' },
+    { value: '3+', label: 'Years Delivering Solutions' },
+    { value: '15+', label: 'Cloud Technologies Mastered' },
     { value: '3', label: 'Cloud Providers' },
-    { value: '1000+', label: 'Hours in K8s' },
+    { value: '1000+', label: 'Hours in Production K8s' },
   ];
 
   return (
     <section id="about" className="py-24 bg-white">
       <div ref={ref} className="max-w-5xl mx-auto px-6 opacity-0 translate-y-6 transition-all duration-700">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-gray-900 mb-3">About Me</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-3">About</h2>
           <div className="w-12 h-0.5 bg-blue-500 mx-auto"></div>
         </div>
 
@@ -29,16 +29,16 @@ const About = () => {
 
         <div className="bg-gray-50 border border-gray-100 rounded-xl p-8 space-y-5 text-gray-700 leading-relaxed">
           <p>
-            I'm a <span className="font-semibold text-gray-900">DevSecOps-focused Cloud Engineer</span> with hands-on experience building, securing, and scaling cloud environments across AWS, GCP, Azure, and hybrid infrastructures. My work spans architecting cloud-native highly available systems, automating infrastructure with Terraform, and enforcing robust security standards end-to-end.
+            I'm a <span className="font-semibold text-gray-900">Cloud Infrastructure & DevSecOps Engineer</span> who architects, secures, and scales cloud environments across AWS, GCP, Azure, and hybrid infrastructures. I don't just configure tools — I own outcomes: uptime, security posture, deployment velocity, and cost efficiency.
           </p>
           <p>
-            Most recently, I built a <span className="font-semibold text-gray-900">production-grade self-managed Kubernetes platform on AWS from scratch</span> — provisioning infrastructure with Terraform, bootstrapping a 6-node HA cluster with kubeadm, deploying 12 microservices, and layering on Istio service mesh, ArgoCD GitOps, Prometheus/Grafana observability, Loki logging, Jaeger tracing, Falco runtime security, and autoscaling.
+            My most recent engagement: <span className="font-semibold text-gray-900">designed and delivered a production-grade self-managed Kubernetes platform on AWS from the ground up</span> — Terraform-provisioned infrastructure, a 6-node HA cluster bootstrapped with kubeadm, 12 microservices, Istio service mesh with mTLS, ArgoCD GitOps, full Prometheus/Grafana/Loki/Jaeger observability, Falco runtime security, and autoscaling. Zero managed services. Every layer built and hardened by hand.
           </p>
           <p>
-            Before going deep into cloud infrastructure, I spent two years as a <span className="font-semibold text-gray-900">full-stack JavaScript developer</span> (Node.js, Express, React, Vue, MongoDB) — which gives me a strong understanding of how modern applications run under the hood and what developers actually need from their infrastructure.
+            Before going deep into cloud infrastructure, I spent two years as a <span className="font-semibold text-gray-900">full-stack JavaScript engineer</span> (Node.js, Express, React, Vue, MongoDB) — which means I understand exactly what developers need from their infrastructure and where systems break under real load.
           </p>
           <p>
-            I'm driven by solving hard infrastructure problems, building resilient systems, and automating everything that can be automated. I'm looking to join a high-impact team where <span className="font-semibold text-gray-900">cloud engineering, DevSecOps, and platform engineering</span> intersect.
+            I solve the hard problems: the ones that stump most engineers, cost companies real money, and require someone who has actually built these systems — not just read about them.
           </p>
         </div>
       </div>
