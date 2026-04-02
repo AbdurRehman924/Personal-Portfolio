@@ -89,10 +89,10 @@ const Projects = () => {
   const ref = useFadeIn();
 
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="case-study" className="py-24 bg-white">
       <div ref={ref} className="max-w-5xl mx-auto px-6 opacity-0 translate-y-6 transition-all duration-700">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-gray-900 mb-3">Featured Project</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-3">Case Study</h2>
           <div className="w-12 h-0.5 bg-blue-500 mx-auto"></div>
         </div>
 
@@ -106,7 +106,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-1">
                 Production-Grade Kubernetes Platform on AWS
               </h3>
-              <p className="text-gray-500 text-sm">Self-Managed · 6-Node HA Cluster · Built from Scratch</p>
+              <p className="text-gray-500 text-sm">Self-Managed · 6-Node HA Cluster · Built from Scratch · Zero Managed Services</p>
             </div>
             <a
               href="https://github.com/AbdurRehman924/self-managed-k8s-aws"
@@ -121,11 +121,11 @@ const Projects = () => {
             </a>
           </div>
           <p className="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 font-medium">
-            Everything in my skills section is backed by real, hands-on work — built, broken, debugged, and shipped in this single production-grade project.
+            Every skill listed on this page is backed by real, hands-on execution — built, broken, debugged, and shipped in this single production-grade platform.
           </p>
           <p className="text-gray-600 leading-relaxed text-sm mt-3">
-            Full lifecycle: infrastructure provisioning with Terraform, cluster bootstrapping with kubeadm,
-            deploying 12 microservices, and layering on a full observability, security, GitOps, and service mesh stack.
+            Full lifecycle ownership: infrastructure provisioning with Terraform, cluster bootstrapping with kubeadm,
+            deploying 12 microservices, and layering on a complete observability, security, GitOps, and service mesh stack.
           </p>
         </div>
 
@@ -133,9 +133,9 @@ const Projects = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           {[
             { value: "6", label: "EC2 Nodes (HA)" },
-            { value: "12", label: "Microservices" },
-            { value: "43", label: "AWS Resources" },
-            { value: "11 / 12", label: "Phases Done · Ongoing" },
+            { value: "12", label: "Microservices Shipped" },
+            { value: "43", label: "AWS Resources Provisioned" },
+            { value: "11 / 12", label: "Phases Complete · Ongoing" },
           ].map((stat, i) => (
             <div key={i} className="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center">
               <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
@@ -176,9 +176,9 @@ const Projects = () => {
         {/* Problems Solved */}
         <div className="bg-gray-50 border border-gray-100 rounded-xl p-6">
           <h4 className="text-sm font-semibold text-gray-800 mb-1 pb-2 border-b border-gray-200">
-            Hard Problems Solved
+            Production Problems Diagnosed & Resolved
           </h4>
-          <p className="text-xs text-gray-400 mb-4">Real production-level issues debugged and resolved</p>
+          <p className="text-xs text-gray-400 mb-4">The kind of issues that stump most engineers — root-caused and fixed</p>
           <div className="space-y-2">
             {problems.map((item, i) => (
               <div key={i} className="border border-gray-200 rounded-lg overflow-hidden bg-white">
