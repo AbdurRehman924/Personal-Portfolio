@@ -31,10 +31,10 @@ const Hero = () => {
           Khan AbdurRehman
         </h1>
         <p className="text-xl md:text-2xl text-blue-600 font-semibold mb-2">
-          DevSecOps Engineer · Cloud Infrastructure
+          Cloud Infrastructure & DevSecOps Engineer
         </p>
         <p className="text-gray-500 text-sm mb-6 max-w-xl mx-auto">
-          Building production-grade Kubernetes platforms, securing cloud infrastructure, and automating everything in between.
+          I architect and ship production-grade Kubernetes platforms, harden cloud infrastructure end-to-end, and automate everything that slows teams down.
         </p>
 
         {/* Skill ticker */}
@@ -48,10 +48,10 @@ const Hero = () => {
         {/* CTAs */}
         <div className="flex gap-3 justify-center flex-wrap">
           <a
-            href="#projects"
+            href="#case-study"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors shadow-sm"
           >
-            View Project
+            View Case Study
           </a>
           <a
             href={`${process.env.PUBLIC_URL}/resume.pdf`}
@@ -67,7 +67,7 @@ const Hero = () => {
             href="#contact"
             className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg text-sm font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
           >
-            Get In Touch
+            Work With Me
           </a>
         </div>
       </div>
