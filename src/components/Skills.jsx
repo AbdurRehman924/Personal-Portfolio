@@ -1,43 +1,35 @@
 const skillCategories = [
   {
     title: "Cloud Platforms",
-    skills: ["AWS (EC2, VPC, IAM, NLB, EBS, CloudWatch)", "Google Cloud Platform (GKE, Cloud Run, IAM)", "Microsoft Azure (Compute, Networking, IAM)", "Cloud-Native Architecture & HA Design"],
+    skills: ["AWS (EC2, VPC, IAM, NLB, EBS, CloudWatch)", "Microsoft Azure", "Google Cloud Platform"],
   },
   {
     title: "Kubernetes & Containers",
-    skills: ["Kubernetes (self-managed, kubeadm)", "Docker & Containerization", "Calico CNI", "Ingress, RBAC, Network Policies", "HPA, VPA, Cluster Autoscaler", "cert-manager", "CoreDNS"],
+    skills: ["Kubernetes (self-managed, kubeadm)", "Docker", "Calico CNI", "Helm", "HPA · VPA · Cluster Autoscaler", "cert-manager"],
   },
   {
     title: "Service Mesh & Observability",
-    skills: ["Istio (mTLS, VirtualServices, PeerAuthentication)", "Prometheus + Grafana", "Loki + Promtail (centralized logging)", "Jaeger (distributed tracing)", "Alertmanager"],
+    skills: ["Istio (mTLS, VirtualServices)", "Prometheus + Grafana", "Loki + Promtail", "Jaeger (distributed tracing)", "Alertmanager"],
   },
   {
     title: "Security & DevSecOps",
-    skills: ["Falco (runtime threat detection)", "Trivy (vulnerability scanning)", "IAM Hardening & Zero-Trust", "Secrets Management (KMS, TLS)", "Network Segmentation", "Security Compliance & Auditing"],
-  },
-  {
-    title: "Networking & DNS",
-    skills: ["VPC Design (subnets, route tables, NAT, peering)", "Load Balancing (L4/L7, NLB/ALB)", "Kubernetes Networking (CoreDNS, CNI, Network Policies)", "DNS management & resolution", "IP-in-IP / overlay networking (Calico IPIP)"],
-  },
-  {
-    title: "Storage & Data",
-    skills: ["Persistent Volumes & Storage Classes", "EBS CSI Driver", "Velero (Backup & Disaster Recovery)", "Volume snapshots & restore", "Stateful workload management"],
-  },
-  {
-    title: "CI/CD & Release Engineering",
-    skills: ["GitHub Actions (pipeline design)", "Container image build & registry (ECR, Docker Hub)", "Rolling deployments, blue/green, canary", "Automated vulnerability scanning in pipelines", "GitOps-driven continuous delivery (ArgoCD)"],
-  },
-  {
-    title: "Reliability & FinOps",
-    skills: ["Chaos Mesh (chaos engineering)", "SLO/SLI concepts & reliability planning", "Kubecost (cost monitoring & optimization)", "Resource requests/limits tuning", "Spot/preemptible instance strategies"],
+    skills: ["Falco (runtime threat detection)", "Trivy (vulnerability scanning)", "Sealed Secrets", "Zero Trust · IAM Hardening", "Network Policies", "OPA (Policy-as-Code)"],
   },
   {
     title: "Infrastructure & IaC",
-    skills: ["Terraform (Modules, Multi-Cloud, State)", "Shell Scripting & Automation", "Cluster bootstrapping (kubeadm)", "Infrastructure lifecycle management"],
+    skills: ["Terraform (Modules, Multi-Cloud, Remote State)", "Ansible", "Shell Scripting", "AWS CodePipeline · CodeBuild"],
   },
   {
-    title: "Programming & Backend",
-    skills: ["Node.js & Express.js", "Python", "JavaScript ES6+", "RESTful API Development", "React.js & Vue.js", "MongoDB"],
+    title: "CI/CD & GitOps",
+    skills: ["GitHub Actions", "ArgoCD (GitOps, auto-sync, self-heal)", "Docker Hub · ECR · ACR", "Canary · Blue/Green · Rolling Deployments"],
+  },
+  {
+    title: "Networking",
+    skills: ["VPC Design (subnets, NAT, peering)", "NLB · ALB (L4/L7)", "CoreDNS · Calico IPIP", "CloudFront CDN · WAF · Route 53"],
+  },
+  {
+    title: "Programming",
+    skills: ["Python", "Node.js · Express.js", "JavaScript ES6+", "React.js · Vue.js", "RESTful APIs", "MongoDB"],
   },
 ];
 
