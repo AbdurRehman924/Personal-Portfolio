@@ -2,12 +2,6 @@ import useFadeIn from '../hooks/useFadeIn';
 
 const About = () => {
   const ref = useFadeIn();
-  const highlights = [
-    { value: '43', label: 'AWS Resources Provisioned (single project)' },
-    { value: '12', label: 'Microservices Shipped on Self-Managed K8s' },
-    { value: '$15K', label: 'Annual Cloud Spend Eliminated' },
-    { value: '75%', label: 'Faster Infrastructure Provisioning' },
-  ];
 
   return (
     <section id="about" className="py-24 bg-white">
@@ -15,16 +9,6 @@ const About = () => {
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold text-gray-900 mb-3">About</h2>
           <div className="w-12 h-0.5 bg-blue-500 mx-auto"></div>
-        </div>
-
-        {/* Stats row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {highlights.map((h, i) => (
-            <div key={i} className="text-center p-5 bg-blue-50 rounded-xl border border-blue-100">
-              <div className="text-3xl font-bold text-blue-600 mb-1">{h.value}</div>
-              <div className="text-xs text-gray-500 font-medium">{h.label}</div>
-            </div>
-          ))}
         </div>
 
         <div className="bg-gray-50 border border-gray-100 rounded-xl p-8 space-y-5 text-gray-700 leading-relaxed">
