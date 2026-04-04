@@ -92,6 +92,7 @@ const projects = [
     title: "Find-24 — Service Marketplace Platform",
     subtitle: "Geo Search · Dual-Role Auth · Provider & Consumer Dashboards",
     github: "https://github.com/AbdurRehman924/Find-24",
+    live: "https://find24.io/",
     highlight: "Real-time geo-radius search powered by Algolia — filter by category, price, rating, and location simultaneously, with results pinned live on a Mapbox map.",
     description: "A full-stack service marketplace connecting consumers with local service providers. Algolia handles faceted search with geo-radius queries. Mapbox renders provider locations interactively. Full auth system (signup, login, email confirmation, password reset). Two separate dashboards — consumers track bookings, spending, and activity; providers manage their listings and profile.",
     stats: [
@@ -121,6 +122,7 @@ const projects = [
     title: "021 — Agency Website with Strapi CMS",
     subtitle: "Content-Driven · Blog System · Calendly · EmailOctopus · Cloudflare Workers",
     github: "https://github.com/AbdurRehman924/021-Strapi-CMS",
+    live: "https://021.uk/",
     highlight: "Headless CMS architecture with Strapi — content editors manage blog posts and pages independently, with markdown rendered server-side and dynamic slug routing.",
     description: "Marketing and content site for a creative/engineering agency. Blog system with dynamic slug routes pulls content from Strapi CMS and renders markdown to HTML. Newsletter subscription via EmailOctopus API. Calendly embedded for call scheduling. Contact form with server-side email sending. Deployed on Cloudflare Workers via Wrangler.",
     stats: [
@@ -151,6 +153,7 @@ const projects = [
     title: "Birdie — Shopify Agency SaaS Landing Page",
     subtitle: "Stripe Subscriptions · Firebase Firestore · EN/DE i18n · Conversion-Optimised",
     github: "https://github.com/AbdurRehman924/Birdie",
+    live: "https://www.birdiecommerce.com/",
     highlight: "Bilingual (English/German) SaaS marketing site with Stripe subscription checkout and Firebase lead capture — built to convert visitors into paying clients.",
     description: "Marketing and onboarding site for a Shopify development agency. Lead intake form saves directly to Firebase Firestore. Stripe server-side checkout handles subscription plan purchases. Full English/German internationalisation via vue-i18n with locale JSON files. Sticky nav reveals CTA only after 600px scroll. Sections: Hero, Pricing, Benefits, USP, Reviews, FAQ.",
     stats: [
@@ -203,17 +206,32 @@ const Projects = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">{project.title}</h3>
                   <p className="text-gray-500 text-sm">{project.subtitle}</p>
                 </div>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 inline-flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
-                >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
-                  </svg>
-                  View on GitHub
-                </a>
+                <div className="flex gap-2 shrink-0">
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      Live Site
+                    </a>
+                  )}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    GitHub
+                  </a>
+                </div>
               </div>
 
               {/* Highlight */}
