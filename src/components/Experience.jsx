@@ -55,10 +55,10 @@ import useFadeIn from '../hooks/useFadeIn';
 const Experience = () => {
   const ref = useFadeIn();
   return (
-    <section id="solutions" className="py-24 bg-white">
+    <section id="highlights-&-journey" className="py-24 bg-white">
       <div ref={ref} className="max-w-4xl mx-auto px-6 opacity-0 translate-y-6 transition-all duration-700">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-gray-900 mb-3">Solutions Delivered</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-3">Highlights & Journey</h2>
           <div className="w-12 h-0.5 bg-blue-500 mx-auto mb-4"></div>
           <p className="text-gray-500 text-sm max-w-xl mx-auto">
             Real engagements. Measurable outcomes. Every result backed by hands-on execution.

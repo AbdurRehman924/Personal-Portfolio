@@ -5,7 +5,7 @@ const Footer = () => (
       <p className="text-sm">© {new Date().getFullYear()} Khan AbdurRehman · DevSecOps Engineer</p>
       <div className="flex gap-5 text-sm">
         <a href="#about" className="hover:text-white transition-colors">About</a>
-        <a href="#solutions" className="hover:text-white transition-colors">Solutions</a>
+        <a href="#highlights-&-journey" className="hover:text-white transition-colors">Highlights & Journey</a>
         <a href="#architectural-reference" className="hover:text-white transition-colors">Architectural Reference</a>
         <a href="https://github.com/AbdurRehman924" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
       </div>
