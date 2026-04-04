@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 
-const links = ['About', 'Highlights & Journey', 'Skills', 'Architectural Reference', 'Contact'];
+const links = ['About', 'Highlights & Journey', 'Skills', 'Work', 'Contact'];
+
+const toId = (link) => {
+  const map = { 'Work': 'architectural-reference', 'Highlights & Journey': 'highlights-&-journey' };
+  return map[link] || link.toLowerCase();
+};
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +28,7 @@ const Navbar = () => {
       { rootMargin: '-40% 0px -55% 0px' }
     );
     links.forEach(link => {
-      const el = document.getElementById(link.toLowerCase().replace(/ /g, '-'));
+      const el = document.getElementById(toId(link));
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
@@ -39,11 +44,9 @@ const Navbar = () => {
           {links.map(link => (
             <a
               key={link}
-              href={`#${link.toLowerCase().replace(/ /g, '-')}`}
+              href={`#${toId(link)}`}
               className={`text-sm font-medium transition-colors ${
-                activeSection === link.toLowerCase().replace(/ /g, '-')
-                  ? 'text-blue-600'
-                  : 'text-gray-500 hover:text-gray-900'
+                activeSection === toId(link) ? 'text-blue-600' : 'text-gray-500 hover:text-gray-900'
               }`}
             >
               {link}
@@ -75,8 +78,8 @@ const Navbar = () => {
           {links.map(link => (
             <a
               key={link}
-              href={`#${link.toLowerCase().replace(/ /g, '-')}`}
-              className={`text-sm font-medium ${activeSection === link.toLowerCase().replace(/ /g, '-') ? 'text-blue-600' : 'text-gray-700'}`}
+              href={`#${toId(link)}`}
+              className={`text-sm font-medium ${activeSection === toId(link) ? 'text-blue-600' : 'text-gray-700'}`}
               onClick={() => setMenuOpen(false)}
             >
               {link}
