@@ -194,9 +194,18 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="space-y-10">
-          {projects.map((project, idx) => (
-            <div key={idx} className={`border rounded-xl p-8 ${idx >= 3 ? 'bg-slate-50 border-slate-200' : 'bg-gray-50 border-gray-200'}`}>
+        {[
+          { label: "Cloud Infrastructure & DevSecOps", items: projects.slice(0, 3) },
+          { label: "Full Stack Engineering", items: projects.slice(3) },
+        ].map((group) => (
+          <div key={group.label} className="mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest">{group.label}</h3>
+              <div className="flex-1 h-px bg-gray-200"></div>
+            </div>
+            <div className="space-y-10">
+              {group.items.map((project, idx) => (
+            <div key={idx} className="bg-gray-50 border border-gray-200 rounded-xl p-8">
               {/* Header */}
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
                 <div>
@@ -278,7 +287,9 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
