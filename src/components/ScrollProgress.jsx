@@ -13,7 +13,7 @@ const ScrollProgress = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-0.5 z-[60] bg-transparent">
+    <div className="fixed top-[57px] left-0 w-full h-0.5 z-[60] bg-gray-100">
       <div
         className="h-full bg-blue-500 transition-all duration-75"
         style={{ width: `${progress}%` }}
