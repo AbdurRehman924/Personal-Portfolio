@@ -1,22 +1,12 @@
 import { useEffect, useState } from 'react';
 
-const skills = ['AWS', 'AZURE', 'GCP', 'Terraform', 'Kubernetes', 'Docker', 'Istio', 'ArgoCD', 'Prometheus', 'Falco', 'Loki', 'Jaeger', 'DevSecOps', 'CI/CD', 'Github Actions', 'MongoDB', 'Express.js', 'React.js', 'Vue.js', 'Node.js', 'JavaScript'];
-
 const Hero = () => {
   const [showScroll, setShowScroll] = useState(true);
-  const [currentSkill, setCurrentSkill] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setShowScroll(window.scrollY < 100);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSkill(prev => (prev + 1) % skills.length);
-    }, 800);
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -37,12 +27,11 @@ const Hero = () => {
           I architect production-grade cloud infrastructure, harden systems end-to-end, and build full-stack applications — from the platform layer down to the product.
         </p>
 
-        {/* Skill ticker */}
-        <div className="h-10 flex items-center justify-center mb-8">
-          <span className="text-gray-500 text-sm mr-2">Currently working with -</span>
-          <span className="font-semibold text-blue-600 text-sm min-w-[100px] inline-block transition-all duration-500">
-            {skills[currentSkill]}
-          </span>
+        {/* Credibility bar */}
+        <div className="flex items-center justify-center gap-6 mb-8 flex-wrap">
+          {["AWS · Azure · GCP", "Kubernetes · Terraform · Istio", "Node.js · Vue.js · React"].map((item, i) => (
+            <span key={i} className="text-xs text-gray-400 font-medium tracking-wide">{item}</span>
+          ))}
         </div>
 
         {/* CTAs */}
@@ -51,7 +40,7 @@ const Hero = () => {
             href="#architectural-reference"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors shadow-sm"
           >
-            View Architectural Reference
+            View My Work
           </a>
           <a
             href={`${process.env.PUBLIC_URL}/resume.pdf`}
