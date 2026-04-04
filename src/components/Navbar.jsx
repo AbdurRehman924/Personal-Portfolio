@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const links = ['About', 'Track Record', 'Skills', 'Work', 'Contact'];
+const links = ['About', 'Track Record', 'Work', 'Contact'];
 
 const toId = (link) => {
   const map = { 'Work': 'architectural-reference', 'Track Record': 'track-record' };
