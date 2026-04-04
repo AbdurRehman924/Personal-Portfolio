@@ -10,7 +10,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 relative">
+    <section id="hero" className="hero-gradient min-h-screen flex items-center justify-center relative">
       <div className="text-center max-w-4xl px-6 pt-16">
         <img
           src={`${process.env.PUBLIC_URL}/portfolio.jpeg`}

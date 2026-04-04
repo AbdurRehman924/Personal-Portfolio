@@ -205,7 +205,7 @@ const Projects = () => {
             </div>
             <div className="space-y-10">
               {group.items.map((project, idx) => (
-            <div key={idx} className="bg-gray-50 border border-gray-200 rounded-xl p-8">
+            <div key={idx} className="card-hover bg-gray-50 border border-gray-200 rounded-xl p-8">
               {/* Header */}
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
                 <div>
