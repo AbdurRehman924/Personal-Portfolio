@@ -11,11 +11,6 @@ const contacts = [
     value: "khan-abdurrehman",
     href: "https://www.linkedin.com/in/khan-abdurrehman-883653214/",
   },
-  {
-    label: "GitHub",
-    value: "AbdurRehman924",
-    href: "https://github.com/AbdurRehman924",
-  },
 ];
 
 const Contact = () => {
