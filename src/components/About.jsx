@@ -3,10 +3,10 @@ import useFadeIn from '../hooks/useFadeIn';
 const About = () => {
   const ref = useFadeIn();
   const highlights = [
-    { value: '3+', label: 'Years Delivering Solutions' },
-    { value: '15+', label: 'Cloud Technologies Mastered' },
-    { value: '3', label: 'Cloud Providers' },
-    { value: '1000+', label: 'Hours in Production K8s' },
+    { value: '43', label: 'AWS Resources Provisioned (single project)' },
+    { value: '12', label: 'Microservices Shipped on Self-Managed K8s' },
+    { value: '$15K', label: 'Annual Cloud Spend Eliminated' },
+    { value: '75%', label: 'Faster Infrastructure Provisioning' },
   ];
 
   return (
