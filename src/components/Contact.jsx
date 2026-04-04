@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gray-50">
       <div ref={ref} className="max-w-2xl mx-auto px-6 text-center opacity-0 translate-y-6 transition-all duration-700">
-        <h2 className="text-4xl font-bold text-gray-900 mb-3">Work With Me</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-3">Contact</h2>
         <div className="w-12 h-0.5 bg-blue-500 mx-auto mb-6"></div>
         <p className="text-gray-500 mb-10 leading-relaxed">
           If you're building cloud infrastructure that needs to be production-ready, secure, and scalable — let's talk. I take on DevSecOps, Cloud Engineering, and Platform Engineering engagements where the work actually matters.
