@@ -34,7 +34,7 @@ const Hero = () => {
           Cloud Infrastructure & DevSecOps Engineer
         </p>
         <p className="text-gray-500 text-sm mb-6 max-w-xl mx-auto">
-          I architect and ship production-grade Kubernetes platforms, harden cloud infrastructure end-to-end, and automate everything that slows teams down.
+          I architect production-grade cloud infrastructure, harden systems end-to-end, and build full-stack applications — from the platform layer down to the product.
         </p>
 
         {/* Skill ticker */}
