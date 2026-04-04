@@ -196,7 +196,7 @@ const Projects = () => {
 
         <div className="space-y-10">
           {projects.map((project, idx) => (
-            <div key={idx} className="bg-gray-50 border border-gray-200 rounded-xl p-8">
+            <div key={idx} className={`border rounded-xl p-8 ${idx >= 3 ? 'bg-slate-50 border-slate-200' : 'bg-gray-50 border-gray-200'}`}>
               {/* Header */}
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
                 <div>
