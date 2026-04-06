@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import useFadeIn from '../hooks/useFadeIn';
 
 const projects = [
@@ -6,6 +7,7 @@ const projects = [
     title: "Production-Grade Kubernetes Platform on AWS",
     subtitle: "Self-Managed · 6-Node HA Cluster · Built from Scratch · Zero Managed Services",
     github: "https://github.com/AbdurRehman924/self-managed-k8s-aws",
+    diagram: `${process.env.PUBLIC_URL}/k8s-architecture.png`,
     highlight: "Built from scratch on raw EC2 — no managed services. Every layer designed, debugged, and owned end-to-end.",
     description: "Full lifecycle ownership: infrastructure provisioning with Terraform, cluster bootstrapping with kubeadm, deploying 12 microservices, and layering on a complete observability, security, GitOps, and service mesh stack.",
     stats: [
@@ -182,6 +184,7 @@ const projects = [
 
 const Projects = () => {
   const ref = useFadeIn();
+  const [openDiagram, setOpenDiagram] = useState(null);
 
   return (
     <section id="architectural-reference" className="py-24 bg-white">
@@ -285,6 +288,31 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Architecture Diagram */}
+              {project.diagram && (
+                <div className="mt-6">
+                  <button
+                    onClick={() => setOpenDiagram(openDiagram === idx ? null : idx)}
+                    className="flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7" />
+                    </svg>
+                    {openDiagram === idx ? 'Hide Architecture Diagram' : 'View Architecture Diagram'}
+                    <span className="text-gray-400">{openDiagram === idx ? '▲' : '▼'}</span>
+                  </button>
+                  {openDiagram === idx && (
+                    <div className="mt-4 rounded-xl overflow-hidden border border-gray-200">
+                      <img
+                        src={project.diagram}
+                        alt="Architecture Diagram"
+                        className="w-full"
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           ))}
             </div>
