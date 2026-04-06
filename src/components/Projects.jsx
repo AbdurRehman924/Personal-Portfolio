@@ -93,7 +93,7 @@ const projects = [
     tag: "Full Stack · Vue 3 · Algolia · Mapbox",
     title: "Find-24 — Service Marketplace Platform",
     subtitle: "Geo Search · Dual-Role Auth · Provider & Consumer Dashboards",
-    github: "https://github.com/AbdurRehman924/Find-24",
+    github: null,
     live: "https://find24.io/",
     highlight: "Real-time geo-radius search powered by Algolia — filter by category, price, rating, and location simultaneously, with results pinned live on a Mapbox map.",
     description: "A full-stack service marketplace connecting consumers with local service providers. Algolia handles faceted search with geo-radius queries. Mapbox renders provider locations interactively. Full auth system (signup, login, email confirmation, password reset). Two separate dashboards — consumers track bookings, spending, and activity; providers manage their listings and profile.",
@@ -123,7 +123,7 @@ const projects = [
     tag: "Full Stack · Nuxt 3 · Strapi CMS · Cloudflare",
     title: "021 — Agency Website with Strapi CMS",
     subtitle: "Content-Driven · Blog System · Calendly · EmailOctopus · Cloudflare Workers",
-    github: "https://github.com/AbdurRehman924/021-Strapi-CMS",
+    github: null,
     live: "https://021.uk/",
     highlight: "Headless CMS architecture with Strapi — content editors manage blog posts and pages independently, with markdown rendered server-side and dynamic slug routing.",
     description: "Marketing and content site for a creative/engineering agency. Blog system with dynamic slug routes pulls content from Strapi CMS and renders markdown to HTML. Newsletter subscription via EmailOctopus API. Calendly embedded for call scheduling. Contact form with server-side email sending. Deployed on Cloudflare Workers via Wrangler.",
@@ -154,7 +154,7 @@ const projects = [
     tag: "Full Stack · Nuxt 3 · Firebase · Stripe",
     title: "Birdie — Shopify Agency SaaS Landing Page",
     subtitle: "Stripe Subscriptions · Firebase Firestore · EN/DE i18n · Conversion-Optimised",
-    github: "https://github.com/AbdurRehman924/Birdie",
+    github: null,
     live: "https://www.birdiecommerce.com/",
     highlight: "Bilingual (English/German) SaaS marketing site with Stripe subscription checkout and Firebase lead capture — built to convert visitors into paying clients.",
     description: "Marketing and onboarding site for a Shopify development agency. Lead intake form saves directly to Firebase Firestore. Stripe server-side checkout handles subscription plan purchases. Full English/German internationalisation via vue-i18n with locale JSON files. Sticky nav reveals CTA only after 600px scroll. Sections: Hero, Pricing, Benefits, USP, Reviews, FAQ.",
@@ -277,6 +277,7 @@ const Projects = () => {
                           Live Site
                         </a>
                       )}
+                      {project.github && (
                       <a
                         href={project.github}
                         target="_blank"
@@ -288,6 +289,7 @@ const Projects = () => {
                         </svg>
                         GitHub
                       </a>
+                      )}
                     </div>
                   </div>
 
