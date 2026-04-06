@@ -13,16 +13,13 @@ const About = () => {
 
         <div className="bg-gray-50 border border-gray-100 rounded-xl p-8 space-y-5 text-gray-700 leading-relaxed">
           <p>
-            I'm a <span className="font-semibold text-gray-900">Cloud Infrastructure & DevSecOps Engineer</span> who architects, secures, and scales cloud environments across AWS, GCP, Azure, and hybrid infrastructures. I don't just configure tools — I own outcomes: uptime, security posture, deployment velocity, and cost efficiency.
+            I'm a <span className="font-semibold text-gray-900">Cloud Infrastructure & DevSecOps Engineer</span> who architects, secures, and scales cloud environments across AWS, Azure, and GCP. I own outcomes — uptime, security posture, deployment velocity, cost efficiency — not just configurations.
           </p>
           <p>
-            My most recent engagement: <span className="font-semibold text-gray-900">designed and delivered a production-grade self-managed Kubernetes platform on AWS from the ground up</span> — Terraform-provisioned infrastructure, a 6-node HA cluster bootstrapped with kubeadm, 12 microservices, Istio service mesh with mTLS, ArgoCD GitOps, full Prometheus/Grafana/Loki/Jaeger observability, Falco runtime security, and autoscaling. Zero managed services. Every layer built and hardened by hand.
+            I came up through two years of <span className="font-semibold text-gray-900">full-stack engineering</span> before moving into infrastructure. That background matters: I understand what developers actually need from their platform, where systems break under real load, and how to build infrastructure that serves the product — not the other way around.
           </p>
           <p>
-            Before going deep into cloud infrastructure, I spent two years as a <span className="font-semibold text-gray-900">full-stack JavaScript engineer</span> (Node.js, Express, React, Vue, MongoDB) — which means I understand exactly what developers need from their infrastructure and where systems break under real load.
-          </p>
-          <p>
-            I solve the hard problems: the ones that stump most engineers, cost companies real money, and require someone who has actually built these systems — not just read about them.
+            I work best on problems that require someone to go deep — the kind where the answer isn't in the docs and the only way through is to understand the system well enough to reason about it from first principles.
           </p>
         </div>
       </div>
