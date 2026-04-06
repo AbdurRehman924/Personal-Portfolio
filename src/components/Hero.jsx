@@ -42,7 +42,7 @@ const Hero = () => {
 
         {/* Credibility bar */}
         <div className="flex items-center justify-center gap-6 mb-8 flex-wrap">
-          {["AWS · Azure · GCP", "Kubernetes · Terraform · Istio", "Node.js · Vue.js · React"].map((item, i) => (
+          {["AWS · Azure · GCP", "Kubernetes · Terraform · Docker", "Node.js · Vue.js · React"].map((item, i) => (
             <span key={i} className="text-sm text-gray-600 font-medium">{item}</span>
           ))}
         </div>
