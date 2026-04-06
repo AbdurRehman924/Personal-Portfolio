@@ -202,9 +202,9 @@ const projects = [
     contribution: true,
     tag: "Full Stack · Headless Commerce · Magento 2",
     title: "PaperFisher — Headless Magento 2 Storefront",
-    subtitle: "Contribution: Pagination · Vue Storefront 2 · Nuxt 2 · GraphQL",
+    subtitle: "Contribution: Pagination · Price Sorting · Alphabetical Sorting · Vue Storefront 2 · Nuxt 2",
     live: "https://www.papierfischer.de/",
-    highlight: "Contributed pagination to a production headless e-commerce storefront — category page navigation integrated with Magento's GraphQL catalog API.",
+    highlight: "Built product listing pagination, price sorting (high→low / low→high), and alphabetical sorting (A→Z / Z→A) on category pages — integrated with Magento's GraphQL catalog API.",
     techStack: [
       "Nuxt 2 · Vue 2 · TypeScript", "Vue Storefront 2 (VSF2)",
       "Magento 2 GraphQL API", "Storefront UI", "Pinia",
