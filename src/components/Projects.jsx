@@ -208,7 +208,7 @@ const projects = [
     techStack: [
       "Nuxt 2 · Vue 2 · TypeScript", "Vue Storefront 2 (VSF2)",
       "Magento 2 GraphQL API", "Storefront UI", "Pinia",
-      "nuxt-i18n (EN/DE)", "Cloudinary", "Redis Cache",
+      "nuxt-i18n (EN/DE)",
     ],
     images: [
       `${process.env.PUBLIC_URL}/projects/papierfischer/01.png`,
