@@ -90,36 +90,6 @@ const projects = [
     ],
   },
   {
-    tag: "Full Stack · Vue 3 · Algolia · Mapbox",
-    title: "Find-24 — Service Marketplace Platform",
-    subtitle: "Geo Search · Dual-Role Auth · Provider & Consumer Dashboards",
-    github: null,
-    live: "https://find24.io/",
-    highlight: "Real-time geo-radius search powered by Algolia — filter by category, price, rating, and location simultaneously, with results pinned live on a Mapbox map.",
-    description: "A full-stack service marketplace connecting consumers with local service providers. Algolia handles faceted search with geo-radius queries. Mapbox renders provider locations interactively. Full auth system (signup, login, email confirmation, password reset). Two separate dashboards — consumers track bookings, spending, and activity; providers manage their listings and profile.",
-    stats: [
-      { value: "2", label: "User Roles (Consumer / Provider)" },
-      { value: "Algolia", label: "Real-Time Faceted Search" },
-      { value: "Mapbox", label: "Geo-Radius Location Search" },
-      { value: "Pinia", label: "Persisted State Management" },
-    ],
-    techStack: [
-      "Nuxt 3", "Vue 3 + TypeScript", "Pinia (persisted state)",
-      "Algolia (faceted + geo search)", "Mapbox GL", "FormKit",
-      "VueUse", "Tailwind CSS", "Headless UI",
-    ],
-    phases: [
-      { name: "Auth System (signup/login/reset)", done: true },
-      { name: "Algolia Search Integration", done: true },
-      { name: "Mapbox Geo Search", done: true },
-      { name: "Category & Price Filters", done: true },
-      { name: "Consumer Dashboard", done: true },
-      { name: "Provider Dashboard", done: true },
-      { name: "Provider Signup Flow", done: true },
-      { name: "Pagination & Sorting", done: true },
-    ],
-  },
-  {
     tag: "Full Stack · Nuxt 3 · Strapi CMS · Cloudflare",
     title: "021 — Agency Website with Strapi CMS",
     subtitle: "Content-Driven · Blog System · Calendly · EmailOctopus · Cloudflare Workers",
@@ -237,8 +207,8 @@ const Projects = () => {
 
         {[
           { label: "Cloud Infrastructure & DevSecOps", items: projects.slice(0, 3) },
-          { label: "Full Stack Engineering", items: projects.slice(3, 6) },
-          { label: "Team Contributions", items: projects.slice(6) },
+          { label: "Full Stack Engineering", items: projects.slice(3, 5) },
+          { label: "Team Contributions", items: projects.slice(5) },
         ].map((group) => (
           <div key={group.label} className="mb-14">
             <div className="flex items-center gap-3 mb-6">
