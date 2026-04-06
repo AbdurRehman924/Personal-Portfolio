@@ -180,6 +180,19 @@ const projects = [
       { name: "Get Started Onboarding Page", done: true },
     ],
   },
+  {
+    contribution: true,
+    tag: "Full Stack · Headless Commerce · Magento 2",
+    title: "PaperFisher — Headless Magento 2 Storefront",
+    subtitle: "Contribution: Pagination · Vue Storefront 2 · Nuxt 2 · GraphQL",
+    github: "https://github.com/AbdurRehman924/PaperFisher",
+    highlight: "Contributed pagination to a production headless e-commerce storefront — category page navigation integrated with Magento's GraphQL catalog API.",
+    techStack: [
+      "Nuxt 2 · Vue 2 · TypeScript", "Vue Storefront 2 (VSF2)",
+      "Magento 2 GraphQL API", "Storefront UI", "Pinia",
+      "nuxt-i18n (EN/DE)", "Cloudinary", "Redis Cache",
+    ],
+  },
 ];
 
 const Projects = () => {
@@ -207,36 +220,30 @@ const Projects = () => {
               <div className="flex-1 h-px bg-gray-200"></div>
             </div>
             <div className="space-y-10">
-              {group.items.map((project, idx) => (
-            <div key={idx} className="card-hover bg-gray-50 border border-gray-200 rounded-xl p-8">
-              {/* Header */}
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
-                <div>
-                  <span className="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full mb-3 inline-block">
-                    {project.tag}
-                  </span>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">{project.title}</h3>
-                  <p className="text-gray-500 text-sm">{project.subtitle}</p>
-                </div>
-                <div className="flex gap-2 shrink-0">
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                      Live Site
-                    </a>
-                  )}
+              {group.items.map((project, idx) => project.contribution ? (
+                /* Compact contribution card */
+                <div key={idx} className="card-hover bg-gray-50 border border-gray-200 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2 flex-wrap">
+                      <span className="text-xs font-semibold text-amber-600 bg-amber-50 border border-amber-100 px-3 py-0.5 rounded-full">Contribution</span>
+                      <span className="text-xs text-gray-400">{project.tag}</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">{project.title}</h3>
+                    <p className="text-sm text-gray-500 mb-3">{project.subtitle}</p>
+                    <p className="text-sm text-gray-600 mb-4">{project.highlight}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.map((tech, i) => (
+                        <span key={i} className="bg-white text-blue-700 text-xs font-medium px-3 py-1 rounded-full border border-blue-100">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
+                    className="shrink-0 inline-flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
@@ -244,77 +251,114 @@ const Projects = () => {
                     GitHub
                   </a>
                 </div>
-              </div>
-
-              {/* Highlight */}
-              <p className="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 font-medium mb-3">
-                {project.highlight}
-              </p>
-              <p className="text-gray-600 leading-relaxed text-sm mb-6">{project.description}</p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                {project.stats.map((stat, i) => (
-                  <div key={i} className="bg-white border border-gray-100 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">{stat.value}</div>
-                    <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Tech Stack + Phases */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white border border-gray-100 rounded-xl p-6">
-                  <h4 className="text-sm font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Tech Stack</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((tech, i) => (
-                      <span key={i} className="bg-gray-50 text-blue-700 text-xs font-medium px-3 py-1 rounded-full border border-blue-100">
-                        {tech}
+              ) : (
+                <div key={idx} className="card-hover bg-gray-50 border border-gray-200 rounded-xl p-8">
+                  {/* Header */}
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
+                    <div>
+                      <span className="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full mb-3 inline-block">
+                        {project.tag}
                       </span>
-                    ))}
+                      <h3 className="text-2xl font-bold text-gray-900 mb-1">{project.title}</h3>
+                      <p className="text-gray-500 text-sm">{project.subtitle}</p>
+                    </div>
+                    <div className="flex gap-2 shrink-0">
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          Live Site
+                        </a>
+                      )}
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div className="bg-white border border-gray-100 rounded-xl p-6">
-                  <h4 className="text-sm font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Build Phases</h4>
-                  <div className="grid grid-cols-2 gap-y-2 gap-x-4">
-                    {project.phases.map((phase, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs">
-                        <span className={phase.done ? "text-green-500 font-bold" : "text-gray-300"}>
-                          {phase.done ? "✓" : "○"}
-                        </span>
-                        <span className={phase.done ? "text-gray-700" : "text-gray-400"}>{phase.name}</span>
+
+                  {/* Highlight */}
+                  <p className="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 font-medium mb-3">
+                    {project.highlight}
+                  </p>
+                  <p className="text-gray-600 leading-relaxed text-sm mb-6">{project.description}</p>
+
+                  {/* Stats */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    {project.stats.map((stat, i) => (
+                      <div key={i} className="bg-white border border-gray-100 rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-blue-600 mb-1">{stat.value}</div>
+                        <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
 
-              {/* Architecture Diagram */}
-              {project.diagram && (
-                <div className="mt-6">
-                  <button
-                    onClick={() => setOpenDiagram(openDiagram === idx ? null : idx)}
-                    className="flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7" />
-                    </svg>
-                    {openDiagram === idx ? 'Hide Architecture Diagram' : 'View Architecture Diagram'}
-                    <span className="text-gray-400">{openDiagram === idx ? '▲' : '▼'}</span>
-                  </button>
-                  {openDiagram === idx && (
-                    <div className="mt-4 rounded-xl overflow-hidden border border-gray-200">
-                      <img
-                        src={project.diagram}
-                        alt="Architecture Diagram"
-                        className="w-full"
-                      />
+                  {/* Tech Stack + Phases */}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white border border-gray-100 rounded-xl p-6">
+                      <h4 className="text-sm font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Tech Stack</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.techStack.map((tech, i) => (
+                          <span key={i} className="bg-gray-50 text-blue-700 text-xs font-medium px-3 py-1 rounded-full border border-blue-100">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="bg-white border border-gray-100 rounded-xl p-6">
+                      <h4 className="text-sm font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Build Phases</h4>
+                      <div className="grid grid-cols-2 gap-y-2 gap-x-4">
+                        {project.phases.map((phase, i) => (
+                          <div key={i} className="flex items-center gap-2 text-xs">
+                            <span className={phase.done ? "text-green-500 font-bold" : "text-gray-300"}>
+                              {phase.done ? "✓" : "○"}
+                            </span>
+                            <span className={phase.done ? "text-gray-700" : "text-gray-400"}>{phase.name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Architecture Diagram */}
+                  {project.diagram && (
+                    <div className="mt-6">
+                      <button
+                        onClick={() => setOpenDiagram(openDiagram === idx ? null : idx)}
+                        className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-3 rounded-xl transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7" />
+                        </svg>
+                        {openDiagram === idx ? 'Hide Architecture Diagram' : 'View Architecture Diagram'}
+                        <span>{openDiagram === idx ? '▲' : '▼'}</span>
+                      </button>
+                      {openDiagram === idx && (
+                        <div className="mt-4 rounded-xl overflow-hidden border border-gray-200">
+                          <img
+                            src={project.diagram}
+                            alt="Architecture Diagram"
+                            className="w-full"
+                          />
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
-              )}
-            </div>
-          ))}
+              ))}
             </div>
           </div>
         ))}
