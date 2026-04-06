@@ -213,7 +213,7 @@ const Projects = () => {
         {[
           { label: "Cloud Infrastructure & DevSecOps", items: projects.slice(0, 3) },
           { label: "Full Stack Engineering", items: projects.slice(3, 6) },
-          { label: "Open Source Contributions", items: projects.slice(6) },
+          { label: "Team Contributions", items: projects.slice(6) },
         ].map((group) => (
           <div key={group.label} className="mb-14">
             <div className="flex items-center gap-3 mb-6">
