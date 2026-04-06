@@ -222,6 +222,7 @@ const projects = [
 const Projects = () => {
   const ref = useFadeIn();
   const [openDiagram, setOpenDiagram] = useState(null);
+  const [lightbox, setLightbox] = useState(null); // { src, alt }
 
   return (
     <section id="architectural-reference" className="py-24 bg-white">
@@ -285,7 +286,7 @@ const Projects = () => {
                           src={src}
                           alt={`${project.title} screenshot ${i + 1}`}
                           className="rounded-lg border border-gray-200 w-full object-cover aspect-video hover:scale-105 transition-transform duration-200 cursor-pointer"
-                          onClick={() => window.open(src, '_blank')}
+                          onClick={() => setLightbox({ src, alt: `${project.title} screenshot ${i + 1}` })}
                         />
                       ))}
                     </div>
@@ -405,6 +406,25 @@ const Projects = () => {
           </div>
         ))}
       </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <img
+            src={lightbox.src}
+            alt={lightbox.alt}
+            className="max-w-full max-h-[90vh] rounded-xl shadow-2xl"
+            onClick={e => e.stopPropagation()}
+          />
+          <button
+            className="absolute top-4 right-4 text-white text-2xl font-bold hover:text-gray-300"
+            onClick={() => setLightbox(null)}
+          >✕</button>
+        </div>
+      )}
     </section>
   );
 };
