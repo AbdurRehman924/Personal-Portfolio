@@ -191,6 +191,12 @@ const projects = [
       "Nuxt.js · Vue.js", "UnoCSS", "Nginx",
       "Open Graph", "Hermes · DHL (shipping)", "SSG (Static Site Generation)",
     ],
+    images: [
+      `${process.env.PUBLIC_URL}/projects/kitchenz/01.png`,
+      `${process.env.PUBLIC_URL}/projects/kitchenz/02.png`,
+      `${process.env.PUBLIC_URL}/projects/kitchenz/03.png`,
+      `${process.env.PUBLIC_URL}/projects/kitchenz/04.png`,
+    ],
   },
   {
     contribution: true,
@@ -235,34 +241,49 @@ const Projects = () => {
             <div className="space-y-10">
               {group.items.map((project, idx) => project.contribution ? (
                 /* Compact contribution card */
-                <div key={idx} className="card-hover bg-gray-50 border border-gray-200 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2 flex-wrap">
-                      <span className="text-xs font-semibold text-amber-600 bg-amber-50 border border-amber-100 px-3 py-0.5 rounded-full">Contribution</span>
-                      <span className="text-xs text-gray-400">{project.tag}</span>
+                <div key={idx} className="card-hover bg-gray-50 border border-gray-200 rounded-xl p-6">
+                  <div className="flex flex-col md:flex-row md:items-start gap-6">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2 flex-wrap">
+                        <span className="text-xs font-semibold text-amber-600 bg-amber-50 border border-amber-100 px-3 py-0.5 rounded-full">Contribution</span>
+                        <span className="text-xs text-gray-400">{project.tag}</span>
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-1">{project.title}</h3>
+                      <p className="text-sm text-gray-500 mb-3">{project.subtitle}</p>
+                      <p className="text-sm text-gray-600 mb-4">{project.highlight}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.techStack.map((tech, i) => (
+                          <span key={i} className="bg-white text-blue-700 text-xs font-medium px-3 py-1 rounded-full border border-blue-100">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">{project.title}</h3>
-                    <p className="text-sm text-gray-500 mb-3">{project.subtitle}</p>
-                    <p className="text-sm text-gray-600 mb-4">{project.highlight}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.techStack.map((tech, i) => (
-                        <span key={i} className="bg-white text-blue-700 text-xs font-medium px-3 py-1 rounded-full border border-blue-100">
-                          {tech}
-                        </span>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      Live Site
+                    </a>
+                  </div>
+                  {project.images && (
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
+                      {project.images.map((src, i) => (
+                        <img
+                          key={i}
+                          src={src}
+                          alt={`${project.title} screenshot ${i + 1}`}
+                          className="rounded-lg border border-gray-200 w-full object-cover aspect-video hover:scale-105 transition-transform duration-200 cursor-pointer"
+                          onClick={() => window.open(src, '_blank')}
+                        />
                       ))}
                     </div>
-                  </div>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                    Live Site
-                  </a>
+                  )}
                 </div>
               ) : (
                 <div key={idx} className="card-hover bg-gray-50 border border-gray-200 rounded-xl p-8">
