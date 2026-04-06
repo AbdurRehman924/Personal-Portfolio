@@ -188,8 +188,8 @@ const projects = [
     live: "https://www.kitchenz.de/",
     highlight: "Built the product configurator — an interactive tool letting customers customize kitchen configurations, materials, and components before purchase.",
     techStack: [
-      "Nuxt.js · Vue.js", "UnoCSS", "Nginx",
-      "Open Graph", "Hermes · DHL (shipping)", "SSG (Static Site Generation)",
+      "Nuxt.js · Vue.js", "UnoCSS",
+      "Open Graph", "SSG (Static Site Generation)",
     ],
     images: [
       `${process.env.PUBLIC_URL}/projects/kitchenz/01.png`,
