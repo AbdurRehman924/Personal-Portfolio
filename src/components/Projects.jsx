@@ -210,6 +210,12 @@ const projects = [
       "Magento 2 GraphQL API", "Storefront UI", "Pinia",
       "nuxt-i18n (EN/DE)", "Cloudinary", "Redis Cache",
     ],
+    images: [
+      `${process.env.PUBLIC_URL}/projects/papierfischer/01.png`,
+      `${process.env.PUBLIC_URL}/projects/papierfischer/02.png`,
+      `${process.env.PUBLIC_URL}/projects/papierfischer/03.png`,
+      `${process.env.PUBLIC_URL}/projects/papierfischer/04.png`,
+    ],
   },
 ];
 
