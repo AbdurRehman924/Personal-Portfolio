@@ -182,6 +182,18 @@ const projects = [
   },
   {
     contribution: true,
+    tag: "Full Stack · Nuxt.js · Vue.js · UnoCSS",
+    title: "Kitchenz — Kitchen Product Configurator",
+    subtitle: "Contribution: Product Configurator · Nuxt.js · Vue.js · UnoCSS · Nginx",
+    live: "https://www.kitchenz.de/",
+    highlight: "Built the product configurator — an interactive tool letting customers customize kitchen configurations, materials, and components before purchase.",
+    techStack: [
+      "Nuxt.js · Vue.js", "UnoCSS", "Nginx",
+      "Open Graph", "Hermes · DHL (shipping)", "SSG (Static Site Generation)",
+    ],
+  },
+  {
+    contribution: true,
     tag: "Full Stack · Headless Commerce · Magento 2",
     title: "PaperFisher — Headless Magento 2 Storefront",
     subtitle: "Contribution: Pagination · Vue Storefront 2 · Nuxt 2 · GraphQL",
