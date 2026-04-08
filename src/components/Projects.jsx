@@ -7,7 +7,7 @@ const projects = [
     title: "Production-Grade Kubernetes Platform on AWS",
     subtitle: "Self-Managed · 6-Node HA Cluster · Built from Scratch · Zero Managed Services",
     github: "https://github.com/AbdurRehman924/self-managed-k8s-aws",
-    diagram: `${process.env.PUBLIC_URL}/projects/k8s-platform/architecture.png`,
+    diagram: `${process.env.PUBLIC_URL}/projects/k8s-platform/architecture.svg`,
     highlight: "Built from scratch on raw EC2 — no managed services. Every layer designed, debugged, and owned end-to-end.",
     description: "Full lifecycle ownership: infrastructure provisioning with Terraform, cluster bootstrapping with kubeadm, deploying 12 microservices, and layering on a complete observability, security, GitOps, and service mesh stack.",
     stats: [
