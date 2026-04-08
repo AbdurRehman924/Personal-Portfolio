@@ -249,7 +249,7 @@
 <text x="621" y="758" font-size="8" fill="#374151">Istio telemetry config</text>
 <text x="621" y="771" font-size="8" fill="#374151">  traces → Jaeger collector</text>
 <rect x="895" y="650" width="200" height="140" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
-<text x="995" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Backup & DR (ns: velero)</text>
+<text x="995" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Backup &amp; DR (ns: velero)</text>
 <line x1="900" y1="669" x2="1090" y2="669" stroke="#eab308" stroke-width="0.8"/>
 <text x="901" y="680" font-size="8" fill="#374151">Velero deployment</text>
 <text x="901" y="693" font-size="8" fill="#374151">Node-agent DaemonSet</text>
@@ -259,7 +259,7 @@
 <text x="901" y="745" font-size="8" fill="#374151">BackupStorageLocation</text>
 <text x="901" y="758" font-size="8" fill="#374151">  S3 backend</text>
 <rect x="1105" y="650" width="170" height="140" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
-<text x="1190" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Cost & Chaos</text>
+<text x="1190" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Cost &amp; Chaos</text>
 <line x1="1110" y1="669" x2="1270" y2="669" stroke="#eab308" stroke-width="0.8"/>
 <text x="1111" y="680" font-size="8" fill="#374151">Kubecost</text>
 <text x="1111" y="693" font-size="8" fill="#374151">  cost per namespace</text>
