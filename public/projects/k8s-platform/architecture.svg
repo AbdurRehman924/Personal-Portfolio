@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1300 1100" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI,Arial,sans-serif">
+<svg viewBox="0 0 1400 1100" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI,Arial,sans-serif">
 <defs>
 <marker id="ab" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/></marker>
 <marker id="ag" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#10b981"/></marker>
@@ -7,320 +7,267 @@
 <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/></marker>
 <marker id="ay" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#eab308"/></marker>
 </defs>
-<rect width="1300" height="1100" fill="#f8fafc"/>
-<text x="650" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Production-Grade Kubernetes Platform on AWS — HIPSTER-SHOP</text>
-<text x="650" y="54" text-anchor="middle" font-size="11" fill="#64748b">Self-Managed · 6-Node HA · kubeadm · Calico · Istio · ArgoCD · Prometheus · Loki · Jaeger · Falco · Velero</text>
-<rect x="20" y="66" width="12" height="12" rx="2" fill="#f97316"/>
-<text x="36" y="77" font-size="11" fill="#475569">AWS Infra</text>
-<rect x="210" y="66" width="12" height="12" rx="2" fill="#3b82f6"/>
-<text x="226" y="77" font-size="11" fill="#475569">Kubernetes</text>
-<rect x="400" y="66" width="12" height="12" rx="2" fill="#10b981"/>
-<text x="416" y="77" font-size="11" fill="#475569">GitOps/Observability</text>
-<rect x="590" y="66" width="12" height="12" rx="2" fill="#8b5cf6"/>
-<text x="606" y="77" font-size="11" fill="#475569">Service Mesh</text>
-<rect x="780" y="66" width="12" height="12" rx="2" fill="#ef4444"/>
-<text x="796" y="77" font-size="11" fill="#475569">Security</text>
-<rect x="970" y="66" width="12" height="12" rx="2" fill="#eab308"/>
-<text x="986" y="77" font-size="11" fill="#475569">Autoscaling</text>
-<rect x="20" y="90" width="1260" height="195" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
-<text x="650" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#9a3412">AWS Infrastructure — us-east-1 (Terraform · 43 Resources)</text>
-<rect x="35" y="118" width="1230" height="158" rx="10" fill="#ffedd5" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="5,3"/>
-<text x="650" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#9a3412">VPC — 10.0.0.0/16 · DNS enabled · IGW + NAT Gateway</text>
-<rect x="48" y="142" width="275" height="125" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1"/>
-<text x="185" y="158" text-anchor="middle" font-size="10" font-weight="bold" fill="#9a3412">Public Subnet — us-east-1a</text>
-<text x="185" y="172" text-anchor="middle" font-size="9" fill="#c2410c">10.0.0.0/24 → IGW</text>
-<rect x="58" y="178" width="120" height="78" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-<text x="118" y="194" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Control Plane 1</text>
-<text x="118" y="207" text-anchor="middle" font-size="9" fill="#b45309">t3a.medium</text>
-<text x="118" y="220" text-anchor="middle" font-size="9" fill="#b45309">50GB gp3</text>
-<text x="118" y="233" text-anchor="middle" font-size="9" fill="#b45309">etcd · API · Sched</text>
-<text x="118" y="246" text-anchor="middle" font-size="9" fill="#b45309">Controller Mgr</text>
-<rect x="193" y="178" width="118" height="78" rx="6" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1"/>
-<text x="252" y="194" text-anchor="middle" font-size="9" font-weight="bold" fill="#0369a1">Bastion</text>
-<text x="252" y="207" text-anchor="middle" font-size="9" fill="#0369a1">t3a.micro</text>
-<text x="252" y="220" text-anchor="middle" font-size="9" fill="#0369a1">98.80.205.104</text>
-<text x="252" y="233" text-anchor="middle" font-size="9" fill="#0369a1">SSH jump host</text>
-<rect x="338" y="142" width="275" height="125" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1"/>
-<text x="475" y="158" text-anchor="middle" font-size="10" font-weight="bold" fill="#9a3412">Public Subnet — us-east-1b</text>
-<text x="475" y="172" text-anchor="middle" font-size="9" fill="#c2410c">10.0.1.0/24 → IGW</text>
-<rect x="348" y="178" width="120" height="78" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-<text x="408" y="194" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Control Plane 2</text>
-<text x="408" y="207" text-anchor="middle" font-size="9" fill="#b45309">t3a.medium</text>
-<text x="408" y="220" text-anchor="middle" font-size="9" fill="#b45309">50GB gp3</text>
-<text x="408" y="233" text-anchor="middle" font-size="9" fill="#b45309">etcd · API · Sched</text>
-<text x="408" y="246" text-anchor="middle" font-size="9" fill="#b45309">Controller Mgr</text>
-<rect x="628" y="142" width="275" height="125" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1"/>
-<text x="765" y="158" text-anchor="middle" font-size="10" font-weight="bold" fill="#9a3412">Public Subnet — us-east-1c</text>
-<text x="765" y="172" text-anchor="middle" font-size="9" fill="#c2410c">10.0.2.0/24 → IGW</text>
-<rect x="638" y="178" width="120" height="78" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-<text x="698" y="194" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Control Plane 3</text>
-<text x="698" y="207" text-anchor="middle" font-size="9" fill="#b45309">t3a.medium</text>
-<text x="698" y="220" text-anchor="middle" font-size="9" fill="#b45309">50GB gp3</text>
-<text x="698" y="233" text-anchor="middle" font-size="9" fill="#b45309">etcd · API · Sched</text>
-<text x="698" y="246" text-anchor="middle" font-size="9" fill="#b45309">Controller Mgr</text>
-<rect x="196" y="142" width="130" height="125" rx="8" fill="#fde8d8" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="261" y="158" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Private 10.0.10.0/24</text>
-<rect x="203" y="163" width="115" height="93" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-<text x="260" y="178" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Worker 1</text>
-<text x="260" y="191" text-anchor="middle" font-size="9" fill="#b45309">t3a.medium</text>
-<text x="260" y="204" text-anchor="middle" font-size="9" fill="#b45309">100GB gp3</text>
-<text x="260" y="217" text-anchor="middle" font-size="9" fill="#b45309">→ NAT GW</text>
-<text x="260" y="230" text-anchor="middle" font-size="9" fill="#b45309">containerd</text>
-<text x="260" y="243" text-anchor="middle" font-size="9" fill="#b45309">kubelet</text>
-<rect x="486" y="142" width="130" height="125" rx="8" fill="#fde8d8" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="551" y="158" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Private 10.0.11.0/24</text>
-<rect x="493" y="163" width="115" height="93" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-<text x="550" y="178" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Worker 2</text>
-<text x="550" y="191" text-anchor="middle" font-size="9" fill="#b45309">t3a.medium</text>
-<text x="550" y="204" text-anchor="middle" font-size="9" fill="#b45309">100GB gp3</text>
-<text x="550" y="217" text-anchor="middle" font-size="9" fill="#b45309">→ NAT GW</text>
-<text x="550" y="230" text-anchor="middle" font-size="9" fill="#b45309">containerd</text>
-<text x="550" y="243" text-anchor="middle" font-size="9" fill="#b45309">kubelet</text>
-<rect x="776" y="142" width="130" height="125" rx="8" fill="#fde8d8" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="841" y="158" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Private 10.0.12.0/24</text>
-<rect x="783" y="163" width="115" height="93" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-<text x="840" y="178" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Worker 3</text>
-<text x="840" y="191" text-anchor="middle" font-size="9" fill="#b45309">t3a.medium</text>
-<text x="840" y="204" text-anchor="middle" font-size="9" fill="#b45309">100GB gp3</text>
-<text x="840" y="217" text-anchor="middle" font-size="9" fill="#b45309">→ NAT GW</text>
-<text x="840" y="230" text-anchor="middle" font-size="9" fill="#b45309">containerd</text>
-<text x="840" y="243" text-anchor="middle" font-size="9" fill="#b45309">kubelet</text>
-<rect x="1100" y="142" width="145" height="125" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
-<text x="1172" y="160" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">NLB</text>
-<text x="1172" y="175" text-anchor="middle" font-size="9" fill="#1d4ed8">k8s-api-nlb</text>
-<text x="1172" y="189" text-anchor="middle" font-size="9" fill="#1d4ed8">port 6443 TCP</text>
-<text x="1172" y="203" text-anchor="middle" font-size="9" fill="#1d4ed8">cross-zone LB</text>
-<text x="1172" y="217" text-anchor="middle" font-size="9" fill="#1d4ed8">→ CP1/CP2/CP3</text>
-<text x="1172" y="231" text-anchor="middle" font-size="9" fill="#1d4ed8">health: TCP:6443</text>
-<text x="1172" y="245" text-anchor="middle" font-size="9" fill="#1d4ed8">IAM: ec2+ecr+elb</text>
-<rect x="20" y="298" width="1260" height="310" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
-<text x="650" y="318" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Kubernetes Cluster — kubeadm · Calico CNI · AWS CCM · StorageClass gp3 (default)</text>
-<rect x="35" y="328" width="780" height="270" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3"/>
-<text x="425" y="346" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">Namespace: hipster-shop · Istio sidecar injection enabled · mTLS STRICT</text>
-<rect x="45" y="354" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="136" y="369" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">frontend</text>
-<text x="136" y="382" text-anchor="middle" font-size="8" fill="#1d4ed8">:8080 · 3r</text>
-<text x="136" y="395" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="49" y="404" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="136" y="416" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="237" y="354" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="328" y="369" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">cartservice</text>
-<text x="328" y="382" text-anchor="middle" font-size="8" fill="#1d4ed8">:7070 · 1r</text>
-<text x="328" y="395" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="241" y="404" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="328" y="416" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="429" y="354" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="520" y="369" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">redis-cart</text>
-<text x="520" y="382" text-anchor="middle" font-size="8" fill="#1d4ed8">:6379 · 1r</text>
-<text x="520" y="395" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="433" y="404" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="520" y="416" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="621" y="354" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="712" y="369" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">checkoutservice</text>
-<text x="712" y="382" text-anchor="middle" font-size="8" fill="#1d4ed8">:5050 · 1r</text>
-<text x="712" y="395" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="625" y="404" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="712" y="416" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="45" y="436" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="136" y="451" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">paymentservice</text>
-<text x="136" y="464" text-anchor="middle" font-size="8" fill="#1d4ed8">:50051 · 1r</text>
-<text x="136" y="477" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="49" y="486" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="136" y="498" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="237" y="436" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="328" y="451" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">emailservice</text>
-<text x="328" y="464" text-anchor="middle" font-size="8" fill="#1d4ed8">:8080 · 1r</text>
-<text x="328" y="477" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="241" y="486" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="328" y="498" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="429" y="436" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="520" y="451" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">productcatalogservice</text>
-<text x="520" y="464" text-anchor="middle" font-size="8" fill="#1d4ed8">:3550 · 1r</text>
-<text x="520" y="477" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="433" y="486" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="520" y="498" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="621" y="436" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="712" y="451" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">currencyservice</text>
-<text x="712" y="464" text-anchor="middle" font-size="8" fill="#1d4ed8">:7000 · 1r</text>
-<text x="712" y="477" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="625" y="486" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="712" y="498" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="45" y="518" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="136" y="533" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">recommendationservice</text>
-<text x="136" y="546" text-anchor="middle" font-size="8" fill="#1d4ed8">:8080 · 1r</text>
-<text x="136" y="559" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="49" y="568" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="136" y="580" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="237" y="518" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="328" y="533" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">shippingservice</text>
-<text x="328" y="546" text-anchor="middle" font-size="8" fill="#1d4ed8">:50051 · 1r</text>
-<text x="328" y="559" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="241" y="568" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="328" y="580" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="429" y="518" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="520" y="533" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">adservice</text>
-<text x="520" y="546" text-anchor="middle" font-size="8" fill="#1d4ed8">:9555 · 1r</text>
-<text x="520" y="559" text-anchor="middle" font-size="8" fill="#1d4ed8">ClusterIP</text>
-<rect x="433" y="568" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="520" y="580" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="621" y="518" width="182" height="72" rx="7" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
-<text x="712" y="533" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">loadgenerator</text>
-<text x="712" y="546" text-anchor="middle" font-size="8" fill="#1d4ed8">:— · 1r</text>
-<text x="712" y="559" text-anchor="middle" font-size="8" fill="#1d4ed8">—</text>
-<rect x="625" y="568" width="174" height="16" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
-<text x="712" y="580" text-anchor="middle" font-size="7" fill="#4338ca">Istio sidecar · Envoy proxy</text>
-<rect x="35" y="600" width="780" height="22" rx="5" fill="#c7d2fe" stroke="#6366f1" stroke-width="1"/>
-<text x="425" y="615" text-anchor="middle" font-size="9" font-weight="bold" fill="#3730a3">Ingress (nginx) → frontend:8080 · NetworkPolicy: default-deny + explicit allow rules</text>
-<rect x="830" y="328" width="220" height="130" rx="8" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5"/>
-<text x="940" y="343" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">ArgoCD (GitOps)</text>
-<line x1="835" y1="348" x2="1045" y2="348" stroke="#10b981" stroke-width="0.8"/>
-<text x="838" y="360" font-size="8" fill="#374151">ns: argocd</text>
-<text x="838" y="373" font-size="8" fill="#374151">app: hipster-shop</text>
-<text x="838" y="386" font-size="8" fill="#374151">repo: github.com/...</text>
-<text x="838" y="399" font-size="8" fill="#374151">branch: main</text>
-<text x="838" y="412" font-size="8" fill="#374151">auto-sync · self-heal</text>
-<text x="838" y="425" font-size="8" fill="#374151">prune: true</text>
-<text x="838" y="438" font-size="8" fill="#374151">CreateNamespace=true</text>
-<rect x="1060" y="328" width="210" height="130" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
-<text x="1165" y="343" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Autoscaling</text>
-<line x1="1065" y1="348" x2="1265" y2="348" stroke="#eab308" stroke-width="0.8"/>
-<text x="1068" y="360" font-size="8" fill="#374151">frontend HPA: 2–10 pods</text>
-<text x="1068" y="373" font-size="8" fill="#374151">  CPU 70% · Mem 80%</text>
-<text x="1068" y="386" font-size="8" fill="#374151">checkoutservice HPA</text>
-<text x="1068" y="399" font-size="8" fill="#374151">productcatalog HPA</text>
-<text x="1068" y="412" font-size="8" fill="#374151">recommendation HPA</text>
-<text x="1068" y="425" font-size="8" fill="#374151">VPA: cart/email/payment</text>
-<text x="1068" y="438" font-size="8" fill="#374151">PDB: checkout/catalog/rec</text>
-<rect x="830" y="468" width="220" height="130" rx="8" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="1.5"/>
-<text x="940" y="483" text-anchor="middle" font-size="10" font-weight="bold" fill="#8b5cf6">Service Mesh (Istio 1.23.4)</text>
-<line x1="835" y1="488" x2="1045" y2="488" stroke="#8b5cf6" stroke-width="0.8"/>
-<text x="838" y="500" font-size="8" fill="#374151">PeerAuth: mTLS STRICT</text>
-<text x="838" y="513" font-size="8" fill="#374151">Canary: 90/10 split</text>
-<text x="838" y="526" font-size="8" fill="#374151">Circuit breaker: catalog</text>
-<text x="838" y="539" font-size="8" fill="#374151">  maxConn:10 · eject:50%</text>
-<text x="838" y="552" font-size="8" fill="#374151">Rate limiting</text>
-<text x="838" y="565" font-size="8" fill="#374151">A/B testing</text>
-<text x="838" y="578" font-size="8" fill="#374151">Istio Gateway</text>
-<rect x="1060" y="468" width="210" height="130" rx="8" fill="#fff1f2" stroke="#ef4444" stroke-width="1.5"/>
-<text x="1165" y="483" text-anchor="middle" font-size="10" font-weight="bold" fill="#ef4444">Security</text>
-<line x1="1065" y1="488" x2="1265" y2="488" stroke="#ef4444" stroke-width="0.8"/>
-<text x="1068" y="500" font-size="8" fill="#374151">Falco (runtime rules)</text>
-<text x="1068" y="513" font-size="8" fill="#374151">  reverse shell detect</text>
-<text x="1068" y="526" font-size="8" fill="#374151">  crypto mining detect</text>
-<text x="1068" y="539" font-size="8" fill="#374151">  pkg manager detect</text>
-<text x="1068" y="552" font-size="8" fill="#374151">Trivy image scanning</text>
-<text x="1068" y="565" font-size="8" fill="#374151">Pod Security Standards</text>
-<text x="1068" y="578" font-size="8" fill="#374151">NetworkPolicies</text>
-<rect x="830" y="608" width="440" height="22" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1.5"/>
-<text x="1050" y="623" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">StorageClass gp3 (default) · encrypted · WaitForFirstConsumer · Retain · allowVolumeExpansion</text>
-<rect x="20" y="622" width="1260" height="155" rx="12" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
-<text x="650" y="641" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">Observability Stack</text>
-<rect x="35" y="650" width="290" height="140" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1.5"/>
-<text x="180" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">Monitoring (ns: monitoring)</text>
-<line x1="40" y1="669" x2="320" y2="669" stroke="#10b981" stroke-width="0.8"/>
-<text x="41" y="680" font-size="8" fill="#374151">Prometheus (kube-prometheus-stack)</text>
-<text x="41" y="693" font-size="8" fill="#374151">  retention: 7d · 10Gi gp3 PVC</text>
-<text x="41" y="706" font-size="8" fill="#374151">  scrapes all hipster-shop pods</text>
-<text x="41" y="719" font-size="8" fill="#374151">Grafana · ingress: grafana.local</text>
-<text x="41" y="732" font-size="8" fill="#374151">  5Gi gp3 PVC · admin auth</text>
-<text x="41" y="745" font-size="8" fill="#374151">Alertmanager</text>
-<text x="41" y="758" font-size="8" fill="#374151">  Slack: #hipster-shop channel</text>
-<text x="41" y="771" font-size="8" fill="#374151">  HighMemory · PodRestarting alerts</text>
-<rect x="335" y="650" width="270" height="140" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1.5"/>
-<text x="470" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">Logging (ns: logging)</text>
-<line x1="340" y1="669" x2="600" y2="669" stroke="#10b981" stroke-width="0.8"/>
-<text x="341" y="680" font-size="8" fill="#374151">Loki 2.9.3</text>
-<text x="341" y="693" font-size="8" fill="#374151">  10Gi gp3 PVC</text>
-<text x="341" y="706" font-size="8" fill="#374151">  runAsNonRoot · fsGroup:10001</text>
-<text x="341" y="719" font-size="8" fill="#374151">Promtail (DaemonSet)</text>
-<text x="341" y="732" font-size="8" fill="#374151">  scrapes all node logs</text>
-<text x="341" y="745" font-size="8" fill="#374151">  ships to Loki :3100</text>
-<text x="341" y="758" font-size="8" fill="#374151">Grafana Loki datasource</text>
-<text x="341" y="771" font-size="8" fill="#374151">  log dashboard deployed</text>
-<rect x="615" y="650" width="270" height="140" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1.5"/>
-<text x="750" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">Tracing (ns: tracing)</text>
-<line x1="620" y1="669" x2="880" y2="669" stroke="#10b981" stroke-width="0.8"/>
-<text x="621" y="680" font-size="8" fill="#374151">Jaeger all-in-one 1.53</text>
-<text x="621" y="693" font-size="8" fill="#374151">  OTLP gRPC :4317</text>
-<text x="621" y="706" font-size="8" fill="#374151">  OTLP HTTP :4318</text>
-<text x="621" y="719" font-size="8" fill="#374151">  Zipkin :9411</text>
-<text x="621" y="732" font-size="8" fill="#374151">  UI: jaeger-query LB :80</text>
-<text x="621" y="745" font-size="8" fill="#374151">  collector: :14268/:14250</text>
-<text x="621" y="758" font-size="8" fill="#374151">Istio telemetry config</text>
-<text x="621" y="771" font-size="8" fill="#374151">  traces → Jaeger collector</text>
-<rect x="895" y="650" width="200" height="140" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
-<text x="995" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Backup &amp; DR (ns: velero)</text>
-<line x1="900" y1="669" x2="1090" y2="669" stroke="#eab308" stroke-width="0.8"/>
-<text x="901" y="680" font-size="8" fill="#374151">Velero deployment</text>
-<text x="901" y="693" font-size="8" fill="#374151">Node-agent DaemonSet</text>
-<text x="901" y="706" font-size="8" fill="#374151">Schedule: daily 2AM</text>
-<text x="901" y="719" font-size="8" fill="#374151">  ns: hipster-shop</text>
-<text x="901" y="732" font-size="8" fill="#374151">  TTL: 30 days</text>
-<text x="901" y="745" font-size="8" fill="#374151">BackupStorageLocation</text>
-<text x="901" y="758" font-size="8" fill="#374151">  S3 backend</text>
-<rect x="1105" y="650" width="170" height="140" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
-<text x="1190" y="664" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Cost &amp; Chaos</text>
-<line x1="1110" y1="669" x2="1270" y2="669" stroke="#eab308" stroke-width="0.8"/>
-<text x="1111" y="680" font-size="8" fill="#374151">Kubecost</text>
-<text x="1111" y="693" font-size="8" fill="#374151">  cost per namespace</text>
-<text x="1111" y="706" font-size="8" fill="#374151">  cost per workload</text>
-<text x="1111" y="719" font-size="8" fill="#374151">Chaos Mesh</text>
-<text x="1111" y="732" font-size="8" fill="#374151">  (configured)</text>
-<text x="1111" y="745" font-size="8" fill="#374151">  fault injection</text>
-<text x="1111" y="758" font-size="8" fill="#374151">  network chaos</text>
-<rect x="20" y="790" width="1260" height="130" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
-<text x="650" y="808" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">Bootstrap · GitOps · IAM</text>
-<rect x="35" y="816" width="310" height="96" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
-<text x="190" y="829" text-anchor="middle" font-size="10" font-weight="bold" fill="#f97316">Terraform Modules</text>
-<line x1="40" y1="834" x2="340" y2="834" stroke="#f97316" stroke-width="0.8"/>
-<text x="41" y="845" font-size="8" fill="#374151">vpc · security-groups · iam</text>
-<text x="41" y="857" font-size="8" fill="#374151">ec2-control-plane (×3, public)</text>
-<text x="41" y="869" font-size="8" fill="#374151">ec2-workers (×3, private)</text>
-<text x="41" y="881" font-size="8" fill="#374151">bastion · load-balancer (NLB)</text>
-<text x="41" y="893" font-size="8" fill="#374151">State: terraform.tfstate</text>
-<text x="41" y="905" font-size="8" fill="#374151">Region: us-east-1 · 43 resources</text>
-<rect x="355" y="816" width="310" height="96" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1.5"/>
-<text x="510" y="829" text-anchor="middle" font-size="10" font-weight="bold" fill="#0ea5e9">Bootstrap (bootstrap-nodes.sh)</text>
-<line x1="360" y1="834" x2="660" y2="834" stroke="#0ea5e9" stroke-width="0.8"/>
-<text x="361" y="845" font-size="8" fill="#374151">SSH via bastion ProxyJump</text>
-<text x="361" y="857" font-size="8" fill="#374151">Parallel: all 6 nodes at once</text>
-<text x="361" y="869" font-size="8" fill="#374151">swap off · overlay · br_netfilter</text>
-<text x="361" y="881" font-size="8" fill="#374151">containerd + SystemdCgroup=true</text>
-<text x="361" y="893" font-size="8" fill="#374151">kubeadm + kubelet + kubectl 1.29</text>
-<text x="361" y="905" font-size="8" fill="#374151">kubeadm init → join CP2/CP3 → workers</text>
-<rect x="675" y="816" width="250" height="96" rx="8" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5"/>
-<text x="800" y="829" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">GitOps (ArgoCD)</text>
-<line x1="680" y1="834" x2="920" y2="834" stroke="#10b981" stroke-width="0.8"/>
-<text x="681" y="845" font-size="8" fill="#374151">ArgoCD in ns: argocd</text>
-<text x="681" y="857" font-size="8" fill="#374151">App: hipster-shop</text>
-<text x="681" y="869" font-size="8" fill="#374151">  path: gitops/base/hipster-shop</text>
-<text x="681" y="881" font-size="8" fill="#374151">  auto-sync · self-heal · prune</text>
-<text x="681" y="893" font-size="8" fill="#374151">Kustomization for all 12 services</text>
-<text x="681" y="905" font-size="8" fill="#374151">gitops/applications/ manifests</text>
-<rect x="935" y="816" width="200" height="96" rx="8" fill="#fdf4ff" stroke="#a855f7" stroke-width="1.5"/>
-<text x="1035" y="829" text-anchor="middle" font-size="10" font-weight="bold" fill="#a855f7">IAM Roles</text>
-<line x1="940" y1="834" x2="1130" y2="834" stroke="#a855f7" stroke-width="0.8"/>
-<text x="941" y="845" font-size="8" fill="#374151">control-plane-role</text>
-<text x="941" y="857" font-size="8" fill="#374151">  ec2:* · elb:* · ecr:*</text>
-<text x="941" y="869" font-size="8" fill="#374151">worker-role</text>
-<text x="941" y="881" font-size="8" fill="#374151">  ec2:Describe* · ebs</text>
-<text x="941" y="893" font-size="8" fill="#374151">  ecr:GetAuth · BatchGet</text>
-<text x="941" y="905" font-size="8" fill="#374151">Instance profiles attached</text>
-<rect x="1145" y="816" width="130" height="96" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-<text x="1210" y="829" text-anchor="middle" font-size="10" font-weight="bold" fill="#ef4444">Security Groups</text>
-<line x1="1150" y1="834" x2="1270" y2="834" stroke="#ef4444" stroke-width="0.8"/>
-<text x="1151" y="845" font-size="8" fill="#374151">CP: 6443·2379·10250</text>
-<text x="1151" y="857" font-size="8" fill="#374151">  179(BGP)·22(bastion)</text>
-<text x="1151" y="869" font-size="8" fill="#374151">Worker: 30000-32767</text>
-<text x="1151" y="881" font-size="8" fill="#374151">  10250·179·IPIP</text>
-<text x="1151" y="893" font-size="8" fill="#374151">Bastion: 22 inbound</text>
-<text x="1151" y="905" font-size="8" fill="#374151">NLB: 6443 inbound</text>
-<line x1="1100" y1="200" x2="900" y2="200" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ab)"/>
-<line x1="940" y1="393" x2="820" y2="393" stroke="#10b981" stroke-width="1.5" marker-end="url(#ag)"/>
-<line x1="180" y1="650" x2="180" y2="630" stroke="#10b981" stroke-width="1.5" marker-end="url(#ag)"/>
-<line x1="470" y1="650" x2="470" y2="630" stroke="#10b981" stroke-width="1.5" marker-end="url(#ag)"/>
-<line x1="750" y1="650" x2="750" y2="630" stroke="#10b981" stroke-width="1.5" marker-end="url(#ag)"/>
-<line x1="940" y1="533" x2="820" y2="500" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ap)"/>
-<line x1="1115" y1="533" x2="820" y2="520" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ar)"/>
-<line x1="1115" y1="393" x2="820" y2="380" stroke="#eab308" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#ay)"/>
+<rect width="1400" height="1100" fill="#f8fafc"/>
+<text x="700" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Production-Grade Kubernetes Platform on AWS — HIPSTER-SHOP</text>
+<text x="700" y="54" text-anchor="middle" font-size="11" fill="#64748b">Self-Managed · 6-Node HA · kubeadm · Calico · Istio · ArgoCD · Prometheus · Loki · Jaeger · Falco · Velero</text>
+<rect x="20" y="64" width="12" height="12" rx="2" fill="#f97316"/>
+<text x="36" y="75" font-size="11" fill="#475569">AWS Infra</text>
+<rect x="230" y="64" width="12" height="12" rx="2" fill="#3b82f6"/>
+<text x="246" y="75" font-size="11" fill="#475569">Kubernetes</text>
+<rect x="440" y="64" width="12" height="12" rx="2" fill="#10b981"/>
+<text x="456" y="75" font-size="11" fill="#475569">GitOps/Observability</text>
+<rect x="650" y="64" width="12" height="12" rx="2" fill="#8b5cf6"/>
+<text x="666" y="75" font-size="11" fill="#475569">Service Mesh</text>
+<rect x="860" y="64" width="12" height="12" rx="2" fill="#ef4444"/>
+<text x="876" y="75" font-size="11" fill="#475569">Security</text>
+<rect x="1070" y="64" width="12" height="12" rx="2" fill="#eab308"/>
+<text x="1086" y="75" font-size="11" fill="#475569">Autoscaling</text>
+<rect x="20" y="88" width="1360" height="235" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+<text x="700" y="107" text-anchor="middle" font-size="13" font-weight="bold" fill="#9a3412">AWS Infrastructure — us-east-1 (Terraform · 43 Resources)</text>
+<rect x="35" y="114" width="1230" height="200" rx="10" fill="#ffedd5" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="5,3"/>
+<text x="650" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#9a3412">VPC — 10.0.0.0/16 · DNS enabled · IGW (public) + NAT Gateway (private)</text>
+<rect x="45" y="138" width="195" height="168" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1"/>
+<text x="142" y="153" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Public 10.0.0.0/24</text>
+<text x="142" y="165" text-anchor="middle" font-size="8" fill="#c2410c">us-east-1a</text>
+<rect x="250" y="138" width="195" height="168" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1"/>
+<text x="347" y="153" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Public 10.0.1.0/24</text>
+<text x="347" y="165" text-anchor="middle" font-size="8" fill="#c2410c">us-east-1b</text>
+<rect x="455" y="138" width="195" height="168" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1"/>
+<text x="552" y="153" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Public 10.0.2.0/24</text>
+<text x="552" y="165" text-anchor="middle" font-size="8" fill="#c2410c">us-east-1c</text>
+<rect x="660" y="138" width="195" height="168" rx="8" fill="#fde8d8" stroke="#fb923c" stroke-width="1"/>
+<text x="757" y="153" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Private 10.0.10.0/24</text>
+<text x="757" y="165" text-anchor="middle" font-size="8" fill="#c2410c">us-east-1a → NAT</text>
+<rect x="865" y="138" width="195" height="168" rx="8" fill="#fde8d8" stroke="#fb923c" stroke-width="1"/>
+<text x="962" y="153" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Private 10.0.11.0/24</text>
+<text x="962" y="165" text-anchor="middle" font-size="8" fill="#c2410c">us-east-1b → NAT</text>
+<rect x="1070" y="138" width="195" height="168" rx="8" fill="#fde8d8" stroke="#fb923c" stroke-width="1"/>
+<text x="1167" y="153" text-anchor="middle" font-size="9" font-weight="bold" fill="#9a3412">Private 10.0.12.0/24</text>
+<text x="1167" y="165" text-anchor="middle" font-size="8" fill="#c2410c">us-east-1c → NAT</text>
+<rect x="50" y="172" width="85" height="126" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+<text x="92" y="188" text-anchor="middle" font-size="8" fill="#92400e">Control Plane 1</text>
+<text x="92" y="202" text-anchor="middle" font-size="8" fill="#92400e">t3a.medium · 50GB gp3</text>
+<text x="92" y="216" text-anchor="middle" font-size="8" fill="#92400e">10.0.0.127</text>
+<text x="92" y="230" text-anchor="middle" font-size="8" fill="#92400e">etcd · API Server</text>
+<text x="92" y="244" text-anchor="middle" font-size="8" fill="#92400e">Scheduler · Ctrl Mgr</text>
+<rect x="150" y="172" width="83" height="126" rx="6" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1"/>
+<text x="191" y="188" text-anchor="middle" font-size="8" fill="#92400e">Bastion</text>
+<text x="191" y="202" text-anchor="middle" font-size="8" fill="#92400e">t3a.micro</text>
+<text x="191" y="216" text-anchor="middle" font-size="8" fill="#92400e">98.80.205.104</text>
+<text x="191" y="230" text-anchor="middle" font-size="8" fill="#92400e">SSH jump host</text>
+<text x="191" y="244" text-anchor="middle" font-size="8" fill="#92400e">ProxyJump</text>
+<rect x="255" y="172" width="183" height="126" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+<text x="346" y="188" text-anchor="middle" font-size="8" fill="#92400e">Control Plane 2</text>
+<text x="346" y="202" text-anchor="middle" font-size="8" fill="#92400e">t3a.medium · 50GB gp3</text>
+<text x="346" y="216" text-anchor="middle" font-size="8" fill="#92400e">10.0.1.250</text>
+<text x="346" y="230" text-anchor="middle" font-size="8" fill="#92400e">etcd · API Server</text>
+<text x="346" y="244" text-anchor="middle" font-size="8" fill="#92400e">Scheduler · Ctrl Mgr</text>
+<rect x="460" y="172" width="183" height="126" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+<text x="551" y="188" text-anchor="middle" font-size="8" fill="#92400e">Control Plane 3</text>
+<text x="551" y="202" text-anchor="middle" font-size="8" fill="#92400e">t3a.medium · 50GB gp3</text>
+<text x="551" y="216" text-anchor="middle" font-size="8" fill="#92400e">10.0.2.9</text>
+<text x="551" y="230" text-anchor="middle" font-size="8" fill="#92400e">etcd · API Server</text>
+<text x="551" y="244" text-anchor="middle" font-size="8" fill="#92400e">Scheduler · Ctrl Mgr</text>
+<rect x="665" y="172" width="183" height="126" rx="6" fill="#fef9c3" stroke="#f59e0b" stroke-width="1"/>
+<text x="756" y="188" text-anchor="middle" font-size="8" fill="#92400e">Worker 1</text>
+<text x="756" y="202" text-anchor="middle" font-size="8" fill="#92400e">t3a.medium · 100GB gp3</text>
+<text x="756" y="216" text-anchor="middle" font-size="8" fill="#92400e">10.0.10.239</text>
+<text x="756" y="230" text-anchor="middle" font-size="8" fill="#92400e">containerd · kubelet</text>
+<text x="756" y="244" text-anchor="middle" font-size="8" fill="#92400e">→ NAT GW</text>
+<rect x="870" y="172" width="183" height="126" rx="6" fill="#fef9c3" stroke="#f59e0b" stroke-width="1"/>
+<text x="961" y="188" text-anchor="middle" font-size="8" fill="#92400e">Worker 2</text>
+<text x="961" y="202" text-anchor="middle" font-size="8" fill="#92400e">t3a.medium · 100GB gp3</text>
+<text x="961" y="216" text-anchor="middle" font-size="8" fill="#92400e">10.0.11.47</text>
+<text x="961" y="230" text-anchor="middle" font-size="8" fill="#92400e">containerd · kubelet</text>
+<text x="961" y="244" text-anchor="middle" font-size="8" fill="#92400e">→ NAT GW</text>
+<rect x="1075" y="172" width="183" height="126" rx="6" fill="#fef9c3" stroke="#f59e0b" stroke-width="1"/>
+<text x="1166" y="188" text-anchor="middle" font-size="8" fill="#92400e">Worker 3</text>
+<text x="1166" y="202" text-anchor="middle" font-size="8" fill="#92400e">t3a.medium · 100GB gp3</text>
+<text x="1166" y="216" text-anchor="middle" font-size="8" fill="#92400e">10.0.12.33</text>
+<text x="1166" y="230" text-anchor="middle" font-size="8" fill="#92400e">containerd · kubelet</text>
+<text x="1166" y="244" text-anchor="middle" font-size="8" fill="#92400e">→ NAT GW</text>
+<rect x="1278" y="138" width="110" height="168" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1333" y="155" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">NLB</text>
+<text x="1333" y="170" text-anchor="middle" font-size="8" fill="#1d4ed8">k8s-api-nlb</text>
+<text x="1333" y="184" text-anchor="middle" font-size="8" fill="#1d4ed8">port 6443 TCP</text>
+<text x="1333" y="198" text-anchor="middle" font-size="8" fill="#1d4ed8">cross-zone LB</text>
+<text x="1333" y="212" text-anchor="middle" font-size="8" fill="#1d4ed8">→ CP1/CP2/CP3</text>
+<text x="1333" y="226" text-anchor="middle" font-size="8" fill="#1d4ed8">health: TCP:6443</text>
+<text x="1333" y="240" text-anchor="middle" font-size="8" fill="#1d4ed8">IAM: ec2+elb+ecr</text>
+<rect x="20" y="335" width="1360" height="295" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+<text x="700" y="354" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Kubernetes Cluster — kubeadm · Calico CNI · AWS CCM · StorageClass gp3 (default, encrypted)</text>
+<rect x="35" y="363" width="870" height="257" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3"/>
+<text x="470" y="380" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">Namespace: hipster-shop · Istio sidecar injection · mTLS STRICT · NetworkPolicy default-deny</text>
+<rect x="45" y="390" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="146" y="404" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">frontend</text>
+<text x="146" y="417" text-anchor="middle" font-size="8" fill="#1d4ed8">:8080 · 3 replicas</text>
+<rect x="48" y="426" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="146" y="440" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="258" y="390" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="359" y="404" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">cartservice</text>
+<text x="359" y="417" text-anchor="middle" font-size="8" fill="#1d4ed8">:7070 · 1 replica</text>
+<rect x="261" y="426" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="359" y="440" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="471" y="390" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="572" y="404" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">redis-cart</text>
+<text x="572" y="417" text-anchor="middle" font-size="8" fill="#1d4ed8">:6379 · 1 replica</text>
+<rect x="474" y="426" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="572" y="440" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="684" y="390" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="785" y="404" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">checkoutservice</text>
+<text x="785" y="417" text-anchor="middle" font-size="8" fill="#1d4ed8">:5050 · 1 replica</text>
+<rect x="687" y="426" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="785" y="440" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="45" y="462" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="146" y="476" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">paymentservice</text>
+<text x="146" y="489" text-anchor="middle" font-size="8" fill="#1d4ed8">:50051 · 1 replica</text>
+<rect x="48" y="498" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="146" y="512" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="258" y="462" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="359" y="476" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">emailservice</text>
+<text x="359" y="489" text-anchor="middle" font-size="8" fill="#1d4ed8">:8080 · 1 replica</text>
+<rect x="261" y="498" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="359" y="512" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="471" y="462" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="572" y="476" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">productcatalogservice</text>
+<text x="572" y="489" text-anchor="middle" font-size="8" fill="#1d4ed8">:3550 · 1 replica</text>
+<rect x="474" y="498" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="572" y="512" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="684" y="462" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="785" y="476" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">currencyservice</text>
+<text x="785" y="489" text-anchor="middle" font-size="8" fill="#1d4ed8">:7000 · 1 replica</text>
+<rect x="687" y="498" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="785" y="512" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="45" y="534" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="146" y="548" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">recommendationservice</text>
+<text x="146" y="561" text-anchor="middle" font-size="8" fill="#1d4ed8">:8080 · 1 replica</text>
+<rect x="48" y="570" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="146" y="584" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="258" y="534" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="359" y="548" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">shippingservice</text>
+<text x="359" y="561" text-anchor="middle" font-size="8" fill="#1d4ed8">:50051 · 1 replica</text>
+<rect x="261" y="570" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="359" y="584" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="471" y="534" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="572" y="548" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">adservice</text>
+<text x="572" y="561" text-anchor="middle" font-size="8" fill="#1d4ed8">:9555 · 1 replica</text>
+<rect x="474" y="570" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="572" y="584" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="684" y="534" width="203" height="62" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+<text x="785" y="548" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">loadgenerator</text>
+<text x="785" y="561" text-anchor="middle" font-size="8" fill="#1d4ed8">:— · 1 replica</text>
+<rect x="687" y="570" width="197" height="20" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.5"/>
+<text x="785" y="584" text-anchor="middle" font-size="7" fill="#4338ca">Istio Envoy sidecar · mTLS</text>
+<rect x="35" y="608" width="870" height="26" rx="5" fill="#c7d2fe" stroke="#6366f1" stroke-width="1"/>
+<text x="470" y="625" text-anchor="middle" font-size="9" font-weight="bold" fill="#3730a3">NGINX Ingress → frontend:8080 · NetworkPolicy: default-deny + explicit allow rules per service</text>
+<rect x="920" y="363" width="215" height="120" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1.5"/>
+<text x="1027" y="377" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">ArgoCD (GitOps)</text>
+<line x1="925" y1="382" x2="1130" y2="382" stroke="#10b981" stroke-width="0.8"/>
+<text x="927" y="394" font-size="8" fill="#374151">ns: argocd</text>
+<text x="927" y="407" font-size="8" fill="#374151">app: hipster-shop</text>
+<text x="927" y="420" font-size="8" fill="#374151">repo: github.com/...</text>
+<text x="927" y="433" font-size="8" fill="#374151">branch: main</text>
+<text x="927" y="446" font-size="8" fill="#374151">auto-sync · self-heal</text>
+<text x="927" y="459" font-size="8" fill="#374151">prune: true · CreateNamespace</text>
+<rect x="1150" y="363" width="220" height="120" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+<text x="1260" y="377" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Autoscaling</text>
+<line x1="1155" y1="382" x2="1365" y2="382" stroke="#eab308" stroke-width="0.8"/>
+<text x="1157" y="394" font-size="8" fill="#374151">frontend HPA: 2–10</text>
+<text x="1157" y="407" font-size="8" fill="#374151">  CPU 70% · Mem 80%</text>
+<text x="1157" y="420" font-size="8" fill="#374151">checkoutservice HPA</text>
+<text x="1157" y="433" font-size="8" fill="#374151">productcatalog HPA</text>
+<text x="1157" y="446" font-size="8" fill="#374151">recommendation HPA</text>
+<text x="1157" y="459" font-size="8" fill="#374151">VPA: cart/email/payment</text>
+<text x="1157" y="472" font-size="8" fill="#374151">PDB: checkout/catalog/rec</text>
+<rect x="920" y="495" width="215" height="140" rx="8" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="1027" y="509" text-anchor="middle" font-size="10" font-weight="bold" fill="#8b5cf6">Istio 1.23.4 Service Mesh</text>
+<line x1="925" y1="514" x2="1130" y2="514" stroke="#8b5cf6" stroke-width="0.8"/>
+<text x="927" y="526" font-size="8" fill="#374151">PeerAuth: mTLS STRICT</text>
+<text x="927" y="539" font-size="8" fill="#374151">Canary: 90/10 split</text>
+<text x="927" y="552" font-size="8" fill="#374151">Circuit breaker: catalog</text>
+<text x="927" y="565" font-size="8" fill="#374151">  maxConn:10 · eject 50%</text>
+<text x="927" y="578" font-size="8" fill="#374151">Rate limiting</text>
+<text x="927" y="591" font-size="8" fill="#374151">A/B testing</text>
+<text x="927" y="604" font-size="8" fill="#374151">Istio Gateway</text>
+<rect x="1150" y="495" width="220" height="140" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="1260" y="509" text-anchor="middle" font-size="10" font-weight="bold" fill="#ef4444">Security</text>
+<line x1="1155" y1="514" x2="1365" y2="514" stroke="#ef4444" stroke-width="0.8"/>
+<text x="1157" y="526" font-size="8" fill="#374151">Falco runtime detection</text>
+<text x="1157" y="539" font-size="8" fill="#374151">  reverse shell</text>
+<text x="1157" y="552" font-size="8" fill="#374151">  crypto mining</text>
+<text x="1157" y="565" font-size="8" fill="#374151">  pkg manager exec</text>
+<text x="1157" y="578" font-size="8" fill="#374151">  sensitive file access</text>
+<text x="1157" y="591" font-size="8" fill="#374151">Trivy image scanning</text>
+<text x="1157" y="604" font-size="8" fill="#374151">Pod Security Standards</text>
+<rect x="20" y="645" width="1360" height="155" rx="12" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+<text x="700" y="663" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">Observability Stack</text>
+<rect x="35" y="672" width="255" height="118" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1.5"/>
+<text x="162" y="685" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">Monitoring (ns: monitoring)</text>
+<line x1="40" y1="690" x2="285" y2="690" stroke="#10b981" stroke-width="0.8"/>
+<text x="41" y="701" font-size="8" fill="#374151">Prometheus kube-prometheus-stack</text>
+<text x="41" y="714" font-size="8" fill="#374151">  retention: 7d · 10Gi gp3 PVC</text>
+<text x="41" y="727" font-size="8" fill="#374151">  scrapes all hipster-shop pods</text>
+<text x="41" y="740" font-size="8" fill="#374151">Grafana · ingress: grafana.local</text>
+<text x="41" y="753" font-size="8" fill="#374151">  5Gi gp3 PVC</text>
+<text x="41" y="766" font-size="8" fill="#374151">Alertmanager → Slack #hipster-shop</text>
+<text x="41" y="779" font-size="8" fill="#374151">  HighMemory · PodRestarting</text>
+<rect x="300" y="672" width="230" height="118" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1.5"/>
+<text x="415" y="685" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">Logging (ns: logging)</text>
+<line x1="305" y1="690" x2="525" y2="690" stroke="#10b981" stroke-width="0.8"/>
+<text x="306" y="701" font-size="8" fill="#374151">Loki 2.9.3 · 10Gi gp3 PVC</text>
+<text x="306" y="714" font-size="8" fill="#374151">  runAsNonRoot · fsGroup:10001</text>
+<text x="306" y="727" font-size="8" fill="#374151">Promtail DaemonSet</text>
+<text x="306" y="740" font-size="8" fill="#374151">  scrapes all node logs</text>
+<text x="306" y="753" font-size="8" fill="#374151">  ships to Loki :3100</text>
+<text x="306" y="766" font-size="8" fill="#374151">Grafana Loki datasource</text>
+<text x="306" y="779" font-size="8" fill="#374151">  log dashboard deployed</text>
+<rect x="540" y="672" width="230" height="118" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1.5"/>
+<text x="655" y="685" text-anchor="middle" font-size="10" font-weight="bold" fill="#10b981">Tracing (ns: tracing)</text>
+<line x1="545" y1="690" x2="765" y2="690" stroke="#10b981" stroke-width="0.8"/>
+<text x="546" y="701" font-size="8" fill="#374151">Jaeger all-in-one 1.53</text>
+<text x="546" y="714" font-size="8" fill="#374151">  OTLP gRPC :4317</text>
+<text x="546" y="727" font-size="8" fill="#374151">  OTLP HTTP :4318</text>
+<text x="546" y="740" font-size="8" fill="#374151">  Zipkin :9411</text>
+<text x="546" y="753" font-size="8" fill="#374151">  UI: LoadBalancer :80</text>
+<text x="546" y="766" font-size="8" fill="#374151">Istio telemetry config</text>
+<text x="546" y="779" font-size="8" fill="#374151">  traces → Jaeger collector</text>
+<rect x="780" y="672" width="200" height="118" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+<text x="880" y="685" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Backup &amp; DR (ns: velero)</text>
+<line x1="785" y1="690" x2="975" y2="690" stroke="#eab308" stroke-width="0.8"/>
+<text x="786" y="701" font-size="8" fill="#374151">Velero deployment</text>
+<text x="786" y="714" font-size="8" fill="#374151">Node-agent DaemonSet</text>
+<text x="786" y="727" font-size="8" fill="#374151">Schedule: daily 2AM</text>
+<text x="786" y="740" font-size="8" fill="#374151">  ns: hipster-shop</text>
+<text x="786" y="753" font-size="8" fill="#374151">  TTL: 30 days</text>
+<text x="786" y="766" font-size="8" fill="#374151">BackupStorageLocation</text>
+<text x="786" y="779" font-size="8" fill="#374151">  S3 backend</text>
+<rect x="990" y="672" width="175" height="118" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+<text x="1077" y="685" text-anchor="middle" font-size="10" font-weight="bold" fill="#eab308">Cost &amp; Chaos</text>
+<line x1="995" y1="690" x2="1160" y2="690" stroke="#eab308" stroke-width="0.8"/>
+<text x="996" y="701" font-size="8" fill="#374151">Kubecost</text>
+<text x="996" y="714" font-size="8" fill="#374151">  cost per namespace</text>
+<text x="996" y="727" font-size="8" fill="#374151">  cost per workload</text>
+<text x="996" y="740" font-size="8" fill="#374151">Chaos Mesh</text>
+<text x="996" y="753" font-size="8" fill="#374151">  fault injection</text>
+<text x="996" y="766" font-size="8" fill="#374151">  network chaos</text>
+<rect x="1175" y="672" width="195" height="118" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+<text x="1272" y="685" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366f1">Bootstrap</text>
+<line x1="1180" y1="690" x2="1365" y2="690" stroke="#6366f1" stroke-width="0.8"/>
+<text x="1181" y="701" font-size="8" fill="#374151">Terraform: vpc·sg·iam</text>
+<text x="1181" y="714" font-size="8" fill="#374151">ec2-cp(×3)·workers(×3)</text>
+<text x="1181" y="727" font-size="8" fill="#374151">bastion · NLB</text>
+<text x="1181" y="740" font-size="8" fill="#374151">bootstrap-nodes.sh</text>
+<text x="1181" y="753" font-size="8" fill="#374151">  parallel SSH via bastion</text>
+<text x="1181" y="766" font-size="8" fill="#374151">kubeadm init → join all</text>
+<text x="1181" y="779" font-size="8" fill="#374151">  K8s 1.29</text>
+<line x1="1278" y1="222" x2="230" y2="222" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ab)"/>
+<text x="754" y="218" text-anchor="middle" font-size="8" fill="#3b82f6">API :6443</text>
+<line x1="920" y1="423" x2="905" y2="423" stroke="#10b981" stroke-width="1.5" marker-end="url(#ag)"/>
+<line x1="920" y1="565" x2="905" y2="565" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#ap)"/>
+<line x1="1150" y1="400" x2="905" y2="400" stroke="#eab308" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#ay)"/>
+<line x1="1150" y1="540" x2="905" y2="540" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#ar)"/>
+<line x1="162" y1="645" x2="162" y2="634" stroke="#10b981" stroke-width="1.5" marker-end="url(#ag)"/>
+<line x1="415" y1="645" x2="415" y2="634" stroke="#10b981" stroke-width="1.5" marker-end="url(#ag)"/>
+<line x1="655" y1="645" x2="655" y2="634" stroke="#10b981" stroke-width="1.5" marker-end="url(#ag)"/>
+<line x1="880" y1="645" x2="470" y2="634" stroke="#eab308" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ay)"/>
 </svg>
