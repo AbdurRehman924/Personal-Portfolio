@@ -36,6 +36,7 @@ const projects = [
     title: "End-to-End Azure DevOps Pipeline with OPA Policy Enforcement",
     subtitle: "AKS · ACR · GitHub Actions · Ansible · Open Policy Agent",
     github: "https://github.com/AbdurRehman924/Portfolio-Devops",
+    diagram: `${process.env.PUBLIC_URL}/projects/portfolio-devops/architecture.svg`,
     highlight: "Four parallel CI/CD pipelines — infrastructure, application, configuration management, and security scanning — all triggered from a single git push.",
     description: "Terraform provisions AKS, ACR, Key Vault, and VNet on Azure. OPA enforces policy-as-code (no public AKS, mandatory resource tags) before any resource is created. Ansible configures the bastion host. GitHub Actions orchestrates the entire workflow end-to-end.",
     stats: [
@@ -65,6 +66,7 @@ const projects = [
     title: "Multi-Environment GitOps Platform with Sealed Secrets",
     subtitle: "K3s on Azure · ArgoCD · Helm · Sealed Secrets · Dev/Staging/Prod",
     github: "https://github.com/AbdurRehman924/DevSecOps-Platform",
+    diagram: `${process.env.PUBLIC_URL}/projects/devsecops-platform/architecture.svg`,
     highlight: "GitOps-native secret management with Sealed Secrets — encrypted secrets committed to Git, decrypted only inside the cluster. Zero plaintext credentials anywhere in the pipeline.",
     description: "Terraform provisions a K3s VM on Azure free tier. ArgoCD manages three environment overlays (dev/staging/prod) via Kustomize. GitHub Actions builds and scans Docker images with Trivy before pushing to Docker Hub. Helm chart packages the application for consistent deployments across environments.",
     stats: [
